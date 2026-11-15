@@ -29,7 +29,7 @@ There is an example `logback.xml` file in the [`egeria.git`](https://github.com/
 
 ## Connecting OMAG Audit Logging for an OMAG Server
 
-While the default logging framework enables a generic interface for debug logging, this is not adequate option for diagnostic and auditing of the open metadata ecosystem.  This is provided by Egeria's [Audit Log Framework (ALF)](/frameworks/alf/overview) described in the [Diagnostics Guide](/guides/diagnostic/overview).
+While the default logging framework enables a generic interface for debug logging, this is not adequate option for diagnostic and auditing of the open metadata ecosystem.  This is provided by Egeria's [Audit Log Framework (ALF)](/frameworks/alf/overview) described in the [Diagnostics Guide](/guides/diagnostic).
  
 The Audit Log Framework is configured in an OMAG Server's [configuration document](/concepts/configuration-document).  It allows you to choose the destination of the audit log records produced by the servers running on the platform.  
 By default, the server's audit log records are summarized and output to the console - system standard output (stdout) - as a destination. 

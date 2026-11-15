@@ -14,10 +14,12 @@ Egeria's guides provide practical guidance on different aspects of using Egeria 
     * [Connector Catalog](/connectors) - the connector catalog provides a list of connectors available for Egeria.
     * [Template Catalog](/catalog-templates) - details of the cataloguing templates prebuild in Egeria.
 
-* [Integration Guide](/guides/integration) - the integration guides describes how to set up integrations between Egeria and third party technologies.  It also makes use of the content packs and connector catalogs.
-* [Administration Guide](/guides/admin) - the administration guide describes how to mange Egeria's configuration.
-* [Operations Guide](/guides/operations/overview) - Describes commands to control and monitor an Egeria deployment.
-* [Diagnostic Guide](/guides/diagnostic/overview) - Problem determination methods and guidance.
+* [Security Guide](/guides/security) - the security guide describes how to harden Egeria's deployment to protect the confidentiality and integrity of the data it stores.
+* [Administration Guide](/guides/admin) - the administration guide describes how to manage Egeria's configuration.
+* [Operations Guide](/guides/operations) - Describes commands to control and monitor an Egeria deployment.
+* [Diagnostic Guide](/guides/diagnostic) - Problem determination methods and guidance.
+* [Monitoring and Tuning Guide](/guides/diagnostic) - Understand how to monitor the infrastructure supporting Egeria and tune it to maximize its performance.
 * [Developer Guide](/guides/developer) - the developer covers how to build connectors, utilities that call Egeria, and open metadata archives.
+* [Integration Guide](/guides/integration) - the integration guides describes how to set up integrations between Egeria and third party technologies.  It also makes use of the content packs and connector catalogs.
 
 --8<-- "snippets/abbr.md"

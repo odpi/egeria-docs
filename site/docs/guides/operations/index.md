@@ -5,7 +5,7 @@
 
 The operations guide describes how to look after a running Egeria deployment: checking that the [OMAG Server Platforms](/concepts/omag-server-platform) and their [OMAG Servers](/concepts/omag-server) are healthy, starting and stopping servers, loading new content, and running and tuning the [connectors](/concepts/connector) that do Egeria's work in the background.
 
-It assumes the servers are already [configured](/guides/admin/servers).  Watching the deployment over time, tuning the infrastructure Egeria depends on (Apache Kafka and PostgreSQL) and routine maintenance such as backups are covered in the [Monitoring and Tuning Guide](/guides/monitoring/overview).  When something has gone wrong, turn to the [Diagnostic Guide](/guides/diagnostic/overview).
+It assumes the servers are already [configured](/guides/admin/servers).  Watching the deployment over time, tuning the infrastructure Egeria depends on (Apache Kafka and PostgreSQL) and routine maintenance such as backups are covered in the [Monitoring and Tuning Guide](/guides/monitoring).  When something has gone wrong, turn to the [Diagnostic Guide](/guides/diagnostic).
 
 ## Ways to operate Egeria
 
@@ -309,7 +309,7 @@ A [catalog target](/concepts/catalog-target) attaches one piece of technology - 
 | `metadataSourceQualifiedName` | The metadata collection that the elements created from this target belong to - so metadata from the sales database and the finance database can be kept apart. |
 | `connectionName` | Which connection to use when the target asset has more than one. |
 | `permittedSynchronization` | The direction metadata may flow for this target.  When it is not set, the connector's value is used. |
-| `deleteMethod` | What to do with open metadata for things removed from the technology - archive, soft-delete or purge.  See [Deleting metadata](/guides/monitoring/overview#managing-deleted-metadata). |
+| `deleteMethod` | What to do with open metadata for things removed from the technology - archive, soft-delete or purge.  See [Deleting metadata](/guides/monitoring#managing-deleted-metadata). |
 
 The configuration properties a connector understands are listed on its page in the [connector catalog](/connectors).  Here is a catalog target being added through Asset Maker:
 
@@ -380,8 +380,8 @@ An engine host normally picks up changes to its engine definitions by itself.  R
 
 ## Further information
 
-* [Monitoring and Tuning Guide](/guides/monitoring/overview) - the audit log, Kafka and PostgreSQL, backups and housekeeping.
-* [Diagnostic Guide](/guides/diagnostic/overview) - finding out why something is not working.
+* [Monitoring and Tuning Guide](/guides/monitoring) - the audit log, Kafka and PostgreSQL, backups and housekeeping.
+* [Diagnostic Guide](/guides/diagnostic) - finding out why something is not working.
 * [OMAG Server Runtime](/guides/operations/operate-omag-server-starter) - running a single server in its own process.
 * [Administration Guide](/guides/admin) - creating and changing server configuration.
 

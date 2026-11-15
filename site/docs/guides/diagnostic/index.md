@@ -5,7 +5,7 @@
 
 This guide focuses on diagnosing and fixing issues running Egeria's [OMAG Server Platform](/concepts/omag-server-platform), the [OMAG Servers](/concepts/omag-server) that run on it, the connectors they host, and the infrastructure they depend on - Apache Kafka and PostgreSQL.
 
-If you are having problems building Egeria, please see the [Building Egeria](/education/tutorials/building-egeria-tutorial/overview) tutorial.  For routine checks and controls (starting servers, restarting connectors) see the [Operations Guide](/guides/operations/overview), and for watching a deployment over time see the [Monitoring and Tuning Guide](/guides/monitoring/overview).
+If you are having problems building Egeria, please see the [Building Egeria](/education/tutorials/building-egeria-tutorial/overview) tutorial.  For routine checks and controls (starting servers, restarting connectors) see the [Operations Guide](/guides/operations), and for watching a deployment over time see the [Monitoring and Tuning Guide](/guides/monitoring).
 
 ## Where to start
 
@@ -15,12 +15,12 @@ Most problems show themselves in one part of the deployment first.  This table p
 |---|---|---|
 | The platform does not start, or is unreachable | The platform's console output; `GET /open-metadata/platform-services/server-platform/origin` | [Platform start-up errors](/guides/diagnostic/examples-of-platform-start-up-errors) |
 | A server does not start | The server's audit log (`Startup` and `Error` records); the server status in Egeria Operations or `hey_egeria_ops show servers startup` | [Server start-up errors](/guides/diagnostic/examples-of-server-start-up-errors) |
-| A user cannot log on, or a request is refused | The `Security` records in the audit log | [Logon problems](/guides/diagnostic/logon-problems), [Security Guide](/guides/security/overview) |
+| A user cannot log on, or a request is refused | The `Security` records in the audit log | [Logon problems](/guides/diagnostic/logon-problems), [Security Guide](/guides/security) |
 | A REST call (from a UI, pyegeria or your own code) fails | The exception in the response - it names the message, cause and fix | [REST API errors](/guides/diagnostic/examples-of-common-rest-api-errors), [Tracing REST calls](/guides/diagnostic/tracing-rest-calls) |
 | A user interface or pyegeria call is slow, empty or wrong | The [view server](/concepts/view-server) audit log, then the metadata access store it calls | [Metadata access store diagnostics](/guides/diagnostic/metadata-access-server-diagnostic-guide) |
 | Metadata is missing, stale or wrong | The connector that maintains it; the metadata access store's repository | [Integration daemon diagnostics](/guides/diagnostic/integration-daemon-diagnostic-guide), [Metadata access store diagnostics](/guides/diagnostic/metadata-access-server-diagnostic-guide) |
 | An integration connector is `FAILED` or not refreshing | The integration daemon's audit log; the connector's status and catalog targets | [Integration daemon diagnostics](/guides/diagnostic/integration-daemon-diagnostic-guide) |
-| Engine actions fail or never start | The engine action's completion message and guards in Egeria Operations; the [engine host](/concepts/engine-host) audit log | [Operating governance engines](/guides/operations/overview#operating-governance-engines) |
+| Engine actions fail or never start | The engine action's completion message and guards in Egeria Operations; the [engine host](/concepts/engine-host) audit log | [Operating governance engines](/guides/operations#operating-governance-engines) |
 | Servers stop hearing about each other's changes | Kafka consumer groups and topics; `OCF-KAFKA-TOPIC-CONNECTOR` messages | [PostgreSQL and Kafka diagnostics](/guides/diagnostic/postgresql-and-kafka-diagnostic-guide), [Cohort errors](/guides/diagnostic/examples-of-cohort-errors) |
 | Repository errors, timeouts or slow queries | `POSTGRES-REPOSITORY-CONNECTOR` and `JDBC-RESOURCE-CONNECTOR` messages; PostgreSQL's own statistics | [PostgreSQL and Kafka diagnostics](/guides/diagnostic/postgresql-and-kafka-diagnostic-guide) |
 
@@ -112,7 +112,7 @@ The description above is an overview of what to do to diagnose and fix a problem
 
 * [Diagnostic Sources](/guides/diagnostic/diagnostic-sources) and [Diagnostic APIs](/guides/diagnostic/diagnostic-apis)
 * [First Failure Data Capture (FFDC)](/guides/diagnostic/ffdc)
-* [Operations Guide](/guides/operations/overview) and [Monitoring and Tuning Guide](/guides/monitoring/overview)
+* [Operations Guide](/guides/operations) and [Monitoring and Tuning Guide](/guides/monitoring)
 * [Administration Guide](/guides/admin)
 
 --8<-- "snippets/abbr.md"

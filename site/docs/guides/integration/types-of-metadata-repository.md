@@ -142,7 +142,7 @@ With this approach, IGC can update its own metadata, and any metadata created th
         These are links to more information about cohorts
 
         - [Operation of the Open Metadata Repository Cohort](/features/cohort-operation/overview)
-        - [Querying the members of an Open Metadata Repository Cohort](/guides/operations/overview)
+        - [Querying the members of an Open Metadata Repository Cohort](/guides/operations)
 
         This link provides guidance if you are interested in writing your own repository connectors:
 

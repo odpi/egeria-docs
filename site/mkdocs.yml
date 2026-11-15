@@ -101,6 +101,117 @@ nav:
               - Language Translations: guides/planning/translations/overview.md
               - On-boarding Organization: guides/planning/organization/overview.md
               - Governance Program: guides/planning/governance-program/overview.md
+      - Security Guide: guides/security/index.md
+      - Administration:
+          - Administration Guide: guides/admin/index.md
+          - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
+          - Configure OMAG Servers:
+              - Configuring an OMAG Server: guides/admin/servers/index.md
+              - By Server Type:
+                  - Configuring an OMAG Server by server type: guides/admin/servers/by-server-type/index.md
+                  - Metadata Access Point: guides/admin/servers/by-server-type/configuring-a-metadata-access-point.md
+                  - Metadata Access Store: guides/admin/servers/by-server-type/configuring-a-metadata-access-store.md
+                  - Repository Proxy: guides/admin/servers/by-server-type/configuring-a-repository-proxy.md
+                  - View Server: guides/admin/servers/by-server-type/configuring-a-view-server.md
+                  - Integration Daemon: guides/admin/servers/by-server-type/configuring-an-integration-daemon.md
+                  - Engine Host: guides/admin/servers/by-server-type/configuring-an-engine-host.md
+                  - Engine Host Configuration Document Example: guides/admin/servers/by-server-type/engine-host-config-doc-example.md
+                  - Conformance Test Server: guides/admin/servers/by-server-type/configuring-a-conformance-test-server.md
+              - By Section:
+                  - Configuring an OMAG Server by configuration document section: guides/admin/servers/by-section/index.md
+                  - Egeria Managed Properties: guides/admin/servers/by-section/egeria-managed-properties.md
+                  - Basic Server Properties: guides/admin/servers/by-section/basic-server-properties-section.md
+                  - Event Bus Default Properties: guides/admin/servers/by-section/event-bus-config-section.md
+                  - Repository Services: guides/admin/servers/by-section/repository-services-section.md
+                  - Server Security Connection: guides/admin/servers/by-section/server-security-connection-section.md
+                  - Access Services: guides/admin/servers/by-section/access-services-section.md
+                  - View Services: guides/admin/servers/by-section/view-services-section.md
+                  - Integration Daemon Services: guides/admin/servers/by-section/integration-daemon-services-section.md
+                  - Engine Host Services: guides/admin/servers/by-section/engine-host-services-section.md
+          - Platform Debug Logging: guides/admin/omag-server-platform-logging.md
+          - Platform Logging JSON Example: guides/admin/omag-server-platform-logging-jsonexample.md
+          - Transport Level Security (TLS): guides/admin/omag-server-platform-transport-level-security.md
+      - Operations Guide:
+          - Operating Egeria: guides/operations/index.md
+          - Starting and Stopping an OMAG Server: guides/operations/starting-and-stopping-omag-server.md
+          - OMAG Server Starter: guides/operations/operate-omag-server-starter.md
+          - Adding an Archive to a Running Server: guides/operations/adding-archive-to-running-server.md
+          - Platform Origin Service: guides/operations/server-platform-origin-service.md
+      - Monitoring and Tuning Guide: guides/monitoring/index.md
+      - Diagnostic Guide:
+          - Diagnostic Process: guides/diagnostic/index.md
+          - Diagnostic Sources: guides/diagnostic/diagnostic-sources.md
+          - First failure data capture (FFDC): guides/diagnostic/ffdc.md
+          - Tracing REST Calls: guides/diagnostic/tracing-rest-calls.md
+          - Logon Problems: guides/diagnostic/logon-problems.md
+          - Diagnostic APIs: guides/diagnostic/diagnostic-apis.md
+          - Error Examples:
+              - Platform Start Up Errors: guides/diagnostic/examples-of-platform-start-up-errors.md
+              - Server Start Up Errors: guides/diagnostic/examples-of-server-start-up-errors.md
+              - Cohort Errors: guides/diagnostic/examples-of-cohort-errors.md
+              - Common REST API Errors: guides/diagnostic/examples-of-common-rest-api-errors.md
+          - Server Diagnostic Guides:
+              - Integration Daemon: guides/diagnostic/integration-daemon-diagnostic-guide.md
+              - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md
+              - PostgreSQL and Kafka: guides/diagnostic/postgresql-and-kafka-diagnostic-guide.md
+      - Developer Guide:
+          - Developer Guide: guides/developer/index.md
+          - Retrieving Metadata: guides/developer/finding-metadata/overview.md
+          - Maintaining Metadata: guides/developer/maintaining-metadata/overview.md
+          - Mapping Technology:
+              - Mapping Technology: guides/developer/mapping-technology/index.md
+              - Data Managers: guides/developer/mapping-technology/data-manager.md
+              - APIs: guides/developer/mapping-technology/apis/overview.md
+              - Databases: guides/developer/mapping-technology/databases/overview.md
+              - Displays: guides/developer/mapping-technology/displays/overview.md
+              - Files: guides/developer/mapping-technology/files/overview.md
+              - Infrastructure: guides/developer/mapping-technology/infrastructure/overview.md
+              - Lineage: guides/developer/mapping-technology/lineage/overview.md
+              - Processes: guides/developer/mapping-technology/processes/overview.md
+              - Topics: guides/developer/mapping-technology/topics/overview.md
+          - Scripting Commands: guides/developer/scripting-commands/overview.md
+          - Building Archives:
+              - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
+              - Governance Engine Packs: guides/developer/open-metadata-archives/creating-governance-engine-packs.md
+              - Governance Pack Introduction: guides/developer/open-metadata-archives/governance-pack-intro.md
+              - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
+          - Building Utilities: guides/developer/building-utilities/overview.md
+          - Building View Services: guides/developer/view-services/overview.md
+          - Building Connectors:
+              - Integration Connectors:
+                  - Anatomy: guides/developer/integration-connectors/index.md
+                  - Catalog Targets: guides/developer/integration-connectors/catalog-targets.md
+                  - Integration Context: guides/developer/integration-connectors/integration-context.md
+                  - Self-Registering: guides/developer/integration-connectors/self-registering-integration-connectors.md
+              - Survey Action Services: guides/developer/survey-action-services/overview.md
+              - Governance Action Services: guides/developer/governance-action-services/overview.md
+              - Watchdog Action Services: guides/developer/watchdog-action-services/overview.md
+              - Repository Governance Services: guides/developer/repository-governance-services/overview.md
+              - Repository Connectors:
+                  - Repository Connectors: guides/developer/repository-connectors/overview.md
+                  - Implementing a Repository Connector: guides/developer/implement-repository-connector.md
+                  - Event Mapper Connector: guides/developer/repository-connectors/event-mapper-connector.md
+                  - OMRS Metamodel: guides/developer/repository-connectors/metamodel/overview.md
+              - Runtime Connectors:
+                  - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
+                  - Cohort Member Client: guides/developer/runtime-connectors/cohort-member-client-connector.md
+                  - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
+                  - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
+                  - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
+                  - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
+                  - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
+                  - REST Client Connector: guides/developer/runtime-connectors/rest-client-connector.md
+              - Resource Connectors:
+                  - New types of connectors: guides/developer/resource-connectors/overview.md
+                  - Open Metadata Topic Connector: guides/developer/resource-connectors/open-metadata-topic-connector.md
+          - Clients:
+              - Python clients: guides/developer/python-clients/overview.md
+              - Java clients: guides/developer/java-clients/overview.md
+              - REST APIs: guides/developer/rest-apis.md
+              - Configuring Logback: guides/developer/logback/overview.md
+              - Using HTTP Helper: guides/developer/http-helper/overview.md
+          - Javadoc: https://odpi.github.io/egeria/index.html
+          - Defining new open metadata types: guides/developer/open-metadata-archives/defining-new-types.md
       - Integration Guide:
           - Integration Guide: guides/integration/index.md
           - Catalog Integration: guides/integration/types-of-metadata-repository.md
@@ -159,117 +270,6 @@ nav:
               - Unity Catalog Templates: catalog-templates/unity-catalog-templates.md
               - PostgreSQL Templates: catalog-templates/postgres-server-templates.md
               - Relational Database Templates: catalog-templates/relational-database-templates.md
-      - Developer Guide:
-          - Developer Guide: guides/developer/index.md
-          - Retrieving Metadata: guides/developer/finding-metadata/overview.md
-          - Maintaining Metadata: guides/developer/maintaining-metadata/overview.md
-          - Mapping Technology:
-                - Mapping Technology: guides/developer/mapping-technology/index.md
-                - Data Managers: guides/developer/mapping-technology/data-manager.md
-                - APIs: guides/developer/mapping-technology/apis/overview.md
-                - Databases: guides/developer/mapping-technology/databases/overview.md
-                - Displays: guides/developer/mapping-technology/displays/overview.md
-                - Files: guides/developer/mapping-technology/files/overview.md
-                - Infrastructure: guides/developer/mapping-technology/infrastructure/overview.md
-                - Lineage: guides/developer/mapping-technology/lineage/overview.md
-                - Processes: guides/developer/mapping-technology/processes/overview.md
-                - Topics: guides/developer/mapping-technology/topics/overview.md
-          - Scripting Commands: guides/developer/scripting-commands/overview.md
-          - Building Archives:
-              - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
-              - Governance Engine Packs: guides/developer/open-metadata-archives/creating-governance-engine-packs.md
-              - Governance Pack Introduction: guides/developer/open-metadata-archives/governance-pack-intro.md
-              - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
-          - Building Utilities: guides/developer/building-utilities/overview.md
-          - Building View Services: guides/developer/view-services/overview.md
-          - Building Connectors:
-              - Integration Connectors:
-                    - Anatomy: guides/developer/integration-connectors/index.md
-                    - Catalog Targets: guides/developer/integration-connectors/catalog-targets.md
-                    - Integration Context: guides/developer/integration-connectors/integration-context.md
-                    - Self-Registering: guides/developer/integration-connectors/self-registering-integration-connectors.md
-              - Survey Action Services: guides/developer/survey-action-services/overview.md
-              - Governance Action Services: guides/developer/governance-action-services/overview.md
-              - Watchdog Action Services: guides/developer/watchdog-action-services/overview.md
-              - Repository Governance Services: guides/developer/repository-governance-services/overview.md
-              - Repository Connectors:
-                  - Repository Connectors: guides/developer/repository-connectors/overview.md
-                  - Implementing a Repository Connector: guides/developer/implement-repository-connector.md
-                  - Event Mapper Connector: guides/developer/repository-connectors/event-mapper-connector.md
-                  - OMRS Metamodel: guides/developer/repository-connectors/metamodel/overview.md
-              - Runtime Connectors:
-                  - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
-                  - Cohort Member Client: guides/developer/runtime-connectors/cohort-member-client-connector.md
-                  - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
-                  - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
-                  - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
-                  - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
-                  - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
-                  - REST Client Connector: guides/developer/runtime-connectors/rest-client-connector.md
-              - Resource Connectors:
-                  - New types of connectors: guides/developer/resource-connectors/overview.md
-                  - Open Metadata Topic Connector: guides/developer/resource-connectors/open-metadata-topic-connector.md
-          - Clients:
-              - Python clients: guides/developer/python-clients/overview.md
-              - Java clients: guides/developer/java-clients/overview.md
-              - REST APIs: guides/developer/rest-apis.md
-              - Configuring Logback: guides/developer/logback/overview.md
-              - Using HTTP Helper: guides/developer/http-helper/overview.md
-          - Javadoc: https://odpi.github.io/egeria/index.html
-          - Defining new open metadata types: guides/developer/open-metadata-archives/defining-new-types.md
-      - Administration:
-          - Administration Guide: guides/admin/index.md
-          - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
-          - Configure OMAG Servers:
-              - Configuring an OMAG Server: guides/admin/servers/index.md
-              - By Server Type:
-                  - Configuring an OMAG Server by server type: guides/admin/servers/by-server-type/index.md
-                  - Metadata Access Point: guides/admin/servers/by-server-type/configuring-a-metadata-access-point.md
-                  - Metadata Access Store: guides/admin/servers/by-server-type/configuring-a-metadata-access-store.md
-                  - Repository Proxy: guides/admin/servers/by-server-type/configuring-a-repository-proxy.md
-                  - View Server: guides/admin/servers/by-server-type/configuring-a-view-server.md
-                  - Integration Daemon: guides/admin/servers/by-server-type/configuring-an-integration-daemon.md
-                  - Engine Host: guides/admin/servers/by-server-type/configuring-an-engine-host.md
-                  - Engine Host Configuration Document Example: guides/admin/servers/by-server-type/engine-host-config-doc-example.md
-                  - Conformance Test Server: guides/admin/servers/by-server-type/configuring-a-conformance-test-server.md
-              - By Section:
-                  - Configuring an OMAG Server by configuration document section: guides/admin/servers/by-section/index.md
-                  - Egeria Managed Properties: guides/admin/servers/by-section/egeria-managed-properties.md
-                  - Basic Server Properties: guides/admin/servers/by-section/basic-server-properties-section.md
-                  - Event Bus Default Properties: guides/admin/servers/by-section/event-bus-config-section.md
-                  - Repository Services: guides/admin/servers/by-section/repository-services-section.md
-                  - Server Security Connection: guides/admin/servers/by-section/server-security-connection-section.md
-                  - Access Services: guides/admin/servers/by-section/access-services-section.md
-                  - View Services: guides/admin/servers/by-section/view-services-section.md
-                  - Integration Daemon Services: guides/admin/servers/by-section/integration-daemon-services-section.md
-                  - Engine Host Services: guides/admin/servers/by-section/engine-host-services-section.md
-          - Platform Debug Logging: guides/admin/omag-server-platform-logging.md
-          - Platform Logging JSON Example: guides/admin/omag-server-platform-logging-jsonexample.md
-          - Transport Level Security (TLS): guides/admin/omag-server-platform-transport-level-security.md
-      - Operations Guide:
-          - Operating Egeria: guides/operations/overview.md
-          - Starting and Stopping an OMAG Server: guides/operations/starting-and-stopping-omag-server.md
-          - OMAG Server Starter: guides/operations/operate-omag-server-starter.md
-          - Adding an Archive to a Running Server: guides/operations/adding-archive-to-running-server.md
-          - Platform Origin Service: guides/operations/server-platform-origin-service.md
-      - Monitoring and Tuning Guide: guides/monitoring/overview.md
-      - Diagnostic Guide:
-          - Diagnostic Process: guides/diagnostic/overview.md
-          - Diagnostic Sources: guides/diagnostic/diagnostic-sources.md
-          - First failure data capture (FFDC): guides/diagnostic/ffdc.md
-          - Tracing REST Calls: guides/diagnostic/tracing-rest-calls.md
-          - Logon Problems: guides/diagnostic/logon-problems.md
-          - Diagnostic APIs: guides/diagnostic/diagnostic-apis.md
-          - Error Examples:
-              - Platform Start Up Errors: guides/diagnostic/examples-of-platform-start-up-errors.md
-              - Server Start Up Errors: guides/diagnostic/examples-of-server-start-up-errors.md
-              - Cohort Errors: guides/diagnostic/examples-of-cohort-errors.md
-              - Common REST API Errors: guides/diagnostic/examples-of-common-rest-api-errors.md
-          - Server Diagnostic Guides:
-              - Integration Daemon: guides/diagnostic/integration-daemon-diagnostic-guide.md
-              - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md
-              - PostgreSQL and Kafka: guides/diagnostic/postgresql-and-kafka-diagnostic-guide.md
-      - Security Guide: guides/security/overview.md
   - Personas and Roles:
         - Overview: practices/coco-pharmaceuticals/personas/index.md
         - Finance and Sales:

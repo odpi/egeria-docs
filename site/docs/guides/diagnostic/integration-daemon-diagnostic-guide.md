@@ -15,16 +15,16 @@ refreshing the connectors and also if one of the connectors throws an exception.
 This allows a remote operator to monitor for issues.
 Connectors can be restarted and refreshed from the portal's Egeria Operations, from `hey_egeria`, from pyegeria
 or through the REST API, to enable the integration daemon to recover from errors - see
-[Refresh and restart](/guides/operations/overview#refresh-and-restart).
+[Refresh and restart](/guides/operations#refresh-and-restart).
 
 Most integration daemons run [integration groups](/concepts/integration-group), so a connector's configuration -
 its connection, catalog targets and refresh interval - is open metadata held in the metadata access store.
 If a connector is incorrectly configured, correct that metadata (see
-[Running and tuning integration connectors](/guides/operations/overview#running-and-tuning-integration-connectors));
+[Running and tuning integration connectors](/guides/operations#running-and-tuning-integration-connectors));
 the daemon picks the change up while it runs.  Only the list of integration groups (or connectors configured
 directly in the daemon) is in the configuration document, which is changed using
 [administration commands](/guides/admin/servers/by-server-type/configuring-an-integration-daemon)
-followed by a [restart](/guides/operations/overview#operating-servers) of the integration daemon.
+followed by a [restart](/guides/operations#operating-servers) of the integration daemon.
 
 ## Sources of errors
 

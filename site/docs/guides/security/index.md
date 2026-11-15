@@ -455,6 +455,6 @@ These behaviours of the code (branch `oak2026`) are worth recording in a securit
     * [Security access control](/concepts/security-access-control) and the [Security Officer API](/services/omvs/security-officer/overview)
     * [Audit log](/concepts/audit-log) and [Audit log destination connector](/concepts/audit-log-destination-connector)
     * [Synchronizing security authorization information](/features/synchronized-access-control/overview)
-    * [Operations Guide](/guides/operations/overview) and [Logon problems](/guides/diagnostic/logon-problems)
+    * [Operations Guide](/guides/operations) and [Logon problems](/guides/diagnostic/logon-problems)
 
 --8<-- "snippets/abbr.md"

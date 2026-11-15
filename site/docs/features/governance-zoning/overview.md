@@ -129,12 +129,35 @@ Below is an example of the user account for the Jacquard Digital Product Loom.  
 
 ## Publish zone settings
 
-The user account above also shows the definition for the **publishZones**.  These are the zones that are set on an element when this user calls the `publishMetadataElement` operation of the [Metadata Expert API](/services/omvs/metadata-expert/overview).
+The user account above also shows the definition for the **publishZones**.  These are the zones that are set on an element when this user calls the `publishMetadataElement` operation of the [Metadata Expert API](/services/omvs/metadata-expert/overview).  They replace the element's current zones.
 
-There is also a `withdrawMetadataElement` operation. This sets the governance zones of an element back to the **defaultZones** setting for the calling user.  
+There is also a `withdrawMetadataElement` operation. This sets the governance zones of an element back to the **defaultZones** setting for the calling user.  Again, these zones replace the element's current zones, so any zone that was added when the element was published is removed.
 
 The `withdrawMetadataElement` operation is useful when performing remediation work on a metadata element after it has been published.
 For example, if a number of changes need to be made to an element and while this is happening, the element should not be visible to general users, calling `withdrawMetadataElement` can be used to hide the element from general users.  Once the updates are complete, the element can be published again to broaden its visibility.
+
+### Publishing an element to everyone
+
+An element with no governance zones is visible to all users.  To say that this is what publishing (or withdrawing) means for a user, define the property with an empty list:
+
+```yaml
+      curatornpa:
+        userAccountStatus: AVAILABLE
+        userAccountType: DIGITAL
+        userName: CuratorIntegrationConnector
+        otherProperties:
+          defaultZones:
+            - quarantine
+          publishZones: []
+```
+
+A property with no value (`publishZones:` or `publishZones: null`) means the same, but the empty list is clearer to the next person reading the user directory.
+
+### When the zones are not defined
+
+If the user's account does not have a `publishZones` property, the `publishMetadataElement` operation fails with a `UserNotAuthorizedException` (`OPEN-METADATA-SECURITY-403-027`) and the element is not changed.  The same is true of `withdrawMetadataElement` when the account has no `defaultZones` property.  The user directory has not said which zones the user may move the element to, and assuming "no zones" would make the element visible to everyone.
+
+This check is made by the [Open Metadata Access Security Connector](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors/open-metadata-access-security-connector).  A server that runs without a security connector does not use governance zones to control access, and these operations leave the element unchanged.
 
 ## Defining Governance Zones
 

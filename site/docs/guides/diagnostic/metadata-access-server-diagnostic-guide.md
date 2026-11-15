@@ -31,14 +31,14 @@ Check the server's status (`hey_egeria_ops show servers status`, the *Servers* t
 |---|---|---|
 | Fails while connecting to the repository | Database unreachable, wrong credentials, or schema owned by another server or metadata collection | [PostgreSQL](/guides/diagnostic/postgresql-and-kafka-diagnostic-guide#the-metadata-access-store-does-not-start) |
 | Fails while loading an archive | The archive file is missing from the platform, or holds types that conflict with types already in the repository | [Server start-up errors](/guides/diagnostic/examples-of-server-start-up-errors) |
-| Starts, but takes many minutes | Large archives being loaded at every start, or a slow database | [Monitoring and Tuning Guide](/guides/monitoring/overview#postgresql) |
+| Starts, but takes many minutes | Large archives being loaded at every start, or a slow database | [Monitoring and Tuning Guide](/guides/monitoring#postgresql) |
 | Starts, but Kafka messages appear | The event bus is unreachable; the server works but other servers will not hear about changes | [Kafka](/guides/diagnostic/postgresql-and-kafka-diagnostic-guide#a-server-cannot-connect-to-kafka) |
 
 ## Requests fail
 
 Requests usually arrive through a view server, so first find out whether the view server or the metadata access store is reporting the error: the exception returned to the caller names the server and the message identifier.
 
-* **`Security` records, or "not authorized" exceptions** - the metadata access store's metadata security connector refused the request.  The record names the user, the element or service, and the rule.  Check the user's roles and the element's [governance zones](/features/governance-zoning/overview); see the [Security Guide](/guides/security/overview).
+* **`Security` records, or "not authorized" exceptions** - the metadata access store's metadata security connector refused the request.  The record names the user, the element or service, and the rule.  Check the user's roles and the element's [governance zones](/features/governance-zoning/overview); see the [Security Guide](/guides/security).
 * **Repository exceptions (`POSTGRES-REPOSITORY-CONNECTOR`, `JDBC-RESOURCE-CONNECTOR`)** - see [Requests fail or time out](/guides/diagnostic/postgresql-and-kafka-diagnostic-guide#requests-fail-or-time-out-while-the-server-is-running).
 * **Paging errors** - a request asked for a page larger than the server's maximum page size, which is logged at start-up (`SERVER-OPS-0001 ... is configured with a max page size of 1000`).  Ask for smaller pages, or raise the limit in the configuration.
 * **Unknown type errors** - the type is newer than the server's type definitions, often because a client (such as pyegeria) is ahead of the platform release.  Align the versions.
@@ -64,7 +64,7 @@ Slow responses in a user interface are nearly always either the database or the 
 
 * Check the repository's connection pool and slow queries - see [Requests are slow](/guides/diagnostic/postgresql-and-kafka-diagnostic-guide#requests-are-slow).
 * Broad searches (such as a single-character search string across all types) touch a great deal of metadata.  Narrow the search by type, or page through the results.
-* A large build-up of soft-deleted elements and old versions slows queries; see [Managing deleted metadata](/guides/monitoring/overview#managing-deleted-metadata).
-* The metadata access store serves every other server.  Many integration connectors refreshing at once can saturate it; spread their refresh intervals out - see [Tuning the refresh interval](/guides/operations/overview#tuning-the-refresh-interval).
+* A large build-up of soft-deleted elements and old versions slows queries; see [Managing deleted metadata](/guides/monitoring#managing-deleted-metadata).
+* The metadata access store serves every other server.  Many integration connectors refreshing at once can saturate it; spread their refresh intervals out - see [Tuning the refresh interval](/guides/operations#tuning-the-refresh-interval).
 
 --8<-- "snippets/abbr.md"

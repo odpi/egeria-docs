@@ -5,7 +5,7 @@
 
 These REST calls return the state of a platform, its servers and their connectors.  They are what the portal's Egeria Operations, the `hey_egeria` monitors and pyegeria's `RuntimeManager` use, so they give the same answers - but calling them directly is useful when a user interface is itself part of the problem, or when you want the raw detail.
 
-All calls need a bearer token from the platform's token service (`POST {{baseURL}}/api/token`); see [REST APIs](/guides/operations/overview#rest-apis) in the Operations Guide.
+All calls need a bearer token from the platform's token service (`POST {{baseURL}}/api/token`); see [REST APIs](/guides/operations#rest-apis) in the Operations Guide.
 
 ## Is the platform running?
 
@@ -107,7 +107,7 @@ GET {{baseURL}}/servers/{{engineHost}}/open-metadata/engine-host/governance-engi
 Authorization: Bearer {{token}}
 ```
 
-The meaning of each connector status, and what to do about it, is in [Connector status](/guides/operations/overview#connector-status).
+The meaning of each connector status, and what to do about it, is in [Connector status](/guides/operations#connector-status).
 
 ## The audit log
 

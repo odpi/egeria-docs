@@ -5,7 +5,7 @@
 
 This guide is for the people who keep an Egeria deployment healthy over time.  It covers what to watch, how to read Egeria's [audit log](/concepts/audit-log), how to tune the infrastructure Egeria depends on - [Apache Kafka](#apache-kafka) and [PostgreSQL](#postgresql) - and the [maintenance tasks](#maintenance-tasks) that every production deployment needs, such as backups and clearing out deleted metadata.
 
-The day-to-day controls - starting servers, refreshing connectors, adding catalog targets - are in the [Operations Guide](/guides/operations/overview).  When monitoring shows that something has gone wrong, the [Diagnostic Guide](/guides/diagnostic/overview) helps you find out why.
+The day-to-day controls - starting servers, refreshing connectors, adding catalog targets - are in the [Operations Guide](/guides/operations).  When monitoring shows that something has gone wrong, the [Diagnostic Guide](/guides/diagnostic) helps you find out why.
 
 ## What to watch
 
@@ -31,7 +31,7 @@ flowchart TB
 | What | Healthy looks like | Where to look |
 |---|---|---|
 | Platforms and servers | Every server that should be active is active. | Egeria Operations *Servers* tab; `hey_egeria_ops show platforms status`; Runtime Manager platform and server reports. |
-| Integration connectors | Status `WAITING`, `REFRESHING` or `RUNNING`; last refresh time keeps moving. | Egeria Operations *Integration Connectors* tab; `hey_egeria_ops show integrations status`.  See [connector status](/guides/operations/overview#connector-status). |
+| Integration connectors | Status `WAITING`, `REFRESHING` or `RUNNING`; last refresh time keeps moving. | Egeria Operations *Integration Connectors* tab; `hey_egeria_ops show integrations status`.  See [connector status](/guides/operations#connector-status). |
 | Engine actions | Actions move through to `COMPLETED`; few `FAILED`; nothing left `WAITING` or `IN_PROGRESS` indefinitely. | Egeria Operations *Engine Actions* tab; `monitor_engine_activity`. |
 | Audit log | No unexpected `Error`, `Exception` or `Security` records. | The [audit log destinations](#where-audit-log-records-go) you have configured. |
 | Kafka | Egeria's consumer groups keep up; topics are not near their retention limit. | Kafka's own tools - see [Apache Kafka](#apache-kafka). |
@@ -66,7 +66,7 @@ Records are passed to one or more [audit log destination connectors](/concepts/a
 |---|---|---|
 | `Startup`, `Shutdown` | Console | Confirms servers and services start and stop cleanly. |
 | `Error`, `Exception`, `Action` | Console and alerting | These need a person to look at them. |
-| `Security` | Console and your security monitoring | Unauthorized requests - see the [Security Guide](/guides/security/overview). |
+| `Security` | Console and your security monitoring | Unauthorized requests - see the [Security Guide](/guides/security). |
 | `Information`, `Event`, `Decision`, `Cohort`, `Types`, `Asset` | File or event topic | Useful history, but noisy on a console. |
 | `Activity` | Event topic | Records of what users and services did; the input for metadata observability. |
 | `PerfMon`, `Trace` | Nothing, normally | Switch on for a specific investigation. |
@@ -88,7 +88,7 @@ Authorization: Bearer {{token}}
 ```
 
 !!! summary "Usage"
-    Send `Error`, `Exception`, `Action` and `Security` records to wherever your alerts come from, keep the full record somewhere searchable, and send `Activity` records to an event topic so that Egeria can maintain usage statistics.  The [Diagnostic Guide](/guides/diagnostic/overview) explains how to use the records to track down a problem.
+    Send `Error`, `Exception`, `Action` and `Security` records to wherever your alerts come from, keep the full record somewhere searchable, and send `Activity` records to an event topic so that Egeria can maintain usage statistics.  The [Diagnostic Guide](/guides/diagnostic) explains how to use the records to track down a problem.
 
 ## Integration connectors and governance engines
 
@@ -99,7 +99,7 @@ Connectors and engines do Egeria's work in the background, so they need watching
 * **Connector activity reports** - set `generateConnectorActivityReports` on a connector's registration and it records what each refresh did (elements created, updated and deleted) as [open metadata](/types/4/0457-Connector-Activity-Reports).  These make it easy to spot a connector that has silently stopped finding anything.
 * **Engine actions** - a growing number of engine actions waiting to start usually means the engine host that runs them is not active or is overloaded.
 
-The main tuning controls are each connector's refresh interval and its catalog targets.  These are described in [Running and tuning integration connectors](/guides/operations/overview#running-and-tuning-integration-connectors).
+The main tuning controls are each connector's refresh interval and its catalog targets.  These are described in [Running and tuning integration connectors](/guides/operations#running-and-tuning-integration-connectors).
 
 ## Apache Kafka
 
@@ -145,7 +145,7 @@ These are configuration properties on the repository connector's connection in t
 |---|---|---|
 | `databaseURL` | - | The JDBC URL; it should select the repository's schema. |
 | `databaseSchema` | `repository_<serverName>` | The schema the repository uses. |
-| `secretsStore`, `secretsCollectionName` | - | Where the database credentials are kept - see the [Security Guide](/guides/security/overview). |
+| `secretsStore`, `secretsCollectionName` | - | Where the database credentials are kept - see the [Security Guide](/guides/security). |
 | `jdbcMaximumPoolSize` | 10 | The maximum number of database connections the repository holds open.  Every metadata request the server handles goes through this pool, so size it for the server's concurrency: a busy view server with many users, and integration daemons running many connectors, drive a lot of parallel requests into the metadata access store. |
 | `defaultAsOfTime` | none (current time) | Makes queries return metadata as it was at a fixed time by default - for example, for a server that serves a frozen snapshot. |
 | `repositoryMode` | read-write | Set to `readOnly` to stop all updates, for example on a replica used for reporting. |
@@ -188,8 +188,8 @@ To see the SQL the repository connector issues, set `logging.level.org.odpi.open
 | Purge soft-deleted metadata | Weekly or monthly, by policy | [Managing deleted metadata](#managing-deleted-metadata) |
 | Clean up audit log files | Weekly | [Cleaning up audit log files](#cleaning-up-audit-log-files) |
 | Review Kafka consumer groups | Monthly | [Topics and consumer groups](#apache-kafka) |
-| Renew certificates | Before they expire | [Security Guide](/guides/security/overview) |
-| Reload content packs | After an upgrade | [Load new content](/guides/operations/overview#operating-servers) |
+| Renew certificates | Before they expire | [Security Guide](/guides/security) |
+| Reload content packs | After an upgrade | [Load new content](/guides/operations#operating-servers) |
 
 ### Backups
 
@@ -215,7 +215,7 @@ Test restores regularly.  A restore of a repository must be matched with the con
 
 ### Managing deleted metadata
 
-When metadata is deleted, Egeria chooses between four outcomes, set by the `deleteMethod` on the request (or on a [catalog target](/guides/operations/overview#tuning-catalog-targets) for metadata maintained by a connector):
+When metadata is deleted, Egeria chooses between four outcomes, set by the `deleteMethod` on the request (or on a [catalog target](/guides/operations#tuning-catalog-targets) for metadata maintained by a connector):
 
 | Delete method | Effect |
 |---|---|
@@ -311,9 +311,9 @@ Adjust the path to the directory set in the destination's endpoint.  If you do n
 
 ## Further information
 
-* [Operations Guide](/guides/operations/overview) - controlling servers and connectors.
-* [Diagnostic Guide](/guides/diagnostic/overview) - investigating problems.
-* [Security Guide](/guides/security/overview) - certificates, credentials, secrets stores and security audit records.
+* [Operations Guide](/guides/operations) - controlling servers and connectors.
+* [Diagnostic Guide](/guides/diagnostic) - investigating problems.
+* [Security Guide](/guides/security) - certificates, credentials, secrets stores and security audit records.
 * [Metadata observability](/features/metadata-observability/overview) - turning audit log activity into usage statistics.
 
 --8<-- "snippets/abbr.md"

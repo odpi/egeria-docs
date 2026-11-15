@@ -81,11 +81,11 @@ This is a checklist of planning tasks for the deployment of your OMAG Server Pla
 - [ ] Consider where you need to have [multiple instances of the same server running to give continuous availability](/guides/admin).
 - [ ] Plan your use of the [event bus](/concepts/event-bus): which technology to use (Apache Kafka is the default) and the names of the topics that your OMAG Servers will use.
 - [ ] Design the [governance zones](/concepts/governance-zone) that you want to use to control the visibility of assets to different communities of users - or processes.
-- [ ] Size and place the PostgreSQL database for each metadata access store, including its connection pool, and plan its [backups](/guides/monitoring/overview#backups).
-- [ ] Plan who will look after Apache Kafka, its retention settings and its consumer groups - see [Apache Kafka](/guides/monitoring/overview#apache-kafka) in the Monitoring and Tuning Guide.
-- [ ] Agree a policy for [purging soft-deleted metadata](/guides/monitoring/overview#managing-deleted-metadata), and schedule a job to apply it.
-- [ ] Decide how the deployment will be [operated](/guides/operations/overview) - through the portal, `hey_egeria`, pyegeria scripts or the REST APIs - and who needs access to each.
-- [ ] Work through the [hardening checklist](/guides/security/overview#hardening-checklist) in the Security Guide before the deployment holds real metadata.
+- [ ] Size and place the PostgreSQL database for each metadata access store, including its connection pool, and plan its [backups](/guides/monitoring#backups).
+- [ ] Plan who will look after Apache Kafka, its retention settings and its consumer groups - see [Apache Kafka](/guides/monitoring#apache-kafka) in the Monitoring and Tuning Guide.
+- [ ] Agree a policy for [purging soft-deleted metadata](/guides/monitoring#managing-deleted-metadata), and schedule a job to apply it.
+- [ ] Decide how the deployment will be [operated](/guides/operations) - through the portal, `hey_egeria`, pyegeria scripts or the REST APIs - and who needs access to each.
+- [ ] Work through the [hardening checklist](/guides/security#hardening-checklist) in the Security Guide before the deployment holds real metadata.
 
 ## Container platform deployment
 
@@ -101,6 +101,6 @@ Kubernetes (or k8s) is de-facto standard platform for deploying, scaling and man
 
 ## Next steps
 
-Once the runtime is designed, the [Administration Guide](/guides/admin) describes how to configure it.  When it is running, the [Operations Guide](/guides/operations/overview), [Monitoring and Tuning Guide](/guides/monitoring/overview), [Diagnostic Guide](/guides/diagnostic/overview) and [Security Guide](/guides/security/overview) describe how to look after it.
+Once the runtime is designed, the [Administration Guide](/guides/admin) describes how to configure it.  When it is running, the [Operations Guide](/guides/operations), [Monitoring and Tuning Guide](/guides/monitoring), [Diagnostic Guide](/guides/diagnostic) and [Security Guide](/guides/security) describe how to look after it.
 
 --8<-- "snippets/abbr.md"

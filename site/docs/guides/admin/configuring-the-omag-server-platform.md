@@ -84,12 +84,12 @@ The [configuration document](/concepts/configuration-document) is the place wher
 You may wish to:
 
 - Move the location of the configuration documents.
-- Protect the configuration documents, for example by restricting access to the directory or by writing a connector that encrypts them.  Egeria does not supply an encrypting store, so the [Security Guide](/guides/security/overview#keeping-secrets-out-of-configuration-documents) describes how to keep the passwords out of the files.
+- Protect the configuration documents, for example by restricting access to the directory or by writing a connector that encrypts them.  Egeria does not supply an encrypting store, so the [Security Guide](/guides/security#keeping-secrets-out-of-configuration-documents) describes how to keep the passwords out of the files.
 - Write you own alternative store for the configuration documents.
 
 All of these options are possible because the configuration document store is implemented in a [configuration document store connector](/concepts/configuration-document/#storage). It is therefore possible to change the implementation or behavior of this connector with a simple configuration change to the OMAG Server Platform.
 
-From V4.2, the configuration document store connector is typically configured in the `application.properties`.   Alternatively, the configuration document store connector can be dynamically configured using the following [Administration Services](/services/admin-services/overview).
+From V4.2, the configuration document store connector is typically configured in the `application.properties`.   Alternatively, the configuration document store connector can be dynamically configured using the following [Administration Services](/services/admin-services).
 
 A configuration document store connector typically needs two pieces of information:
 

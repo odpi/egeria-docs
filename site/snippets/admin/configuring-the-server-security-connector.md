@@ -56,7 +56,7 @@ Security is configured for a specific [OMAG Server](/concepts/omag-server) by ad
     }
     ```
 
-    The [Security Guide](/guides/security/overview#the-server-metadata-security-connector) explains how this connector checks each request.
+    The [Security Guide](/guides/security#the-server-metadata-security-connector) explains how this connector checks each request.
 
 ### Determine configured security
 

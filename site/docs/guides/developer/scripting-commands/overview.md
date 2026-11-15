@@ -51,7 +51,7 @@ As the number of commands has grown, they have been organized by role into group
 * [hey_egeria](/user-interfaces/hey-egeria/overview) - provides access to the `cat`, `my`, `tech` and `ops` commands as subcommands, for example `hey_egeria cat ...`.
 * `hey_egeria_ops` - a separate entry point for the operations commands, for example `hey_egeria_ops show platforms status` and `hey_egeria_ops show servers status`.
 
-Adding `tui` to a CLI command, for example `hey_egeria tui`, opens a forms-based text user interface for picking and running the commands.  The [Operations Guide](/guides/operations/overview#hey_egeria-commands) describes the operations commands in more detail.
+Adding `tui` to a CLI command, for example `hey_egeria tui`, opens a forms-based text user interface for picking and running the commands.  The [Operations Guide](/guides/operations#hey_egeria-commands) describes the operations commands in more detail.
 
 !!! info "Full Guide to Egeria's Python Commands"
     The full guide to Egeria's Python Commands is available at [Command Line Interfaces](https://github.com/odpi/egeria-python/blob/main/commands/doc/README.md)

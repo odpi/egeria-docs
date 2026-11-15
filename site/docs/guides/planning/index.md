@@ -68,14 +68,14 @@ flowchart TB
 |---|---|---|
 | **Starting point** | Is [Egeria Workspaces](/egeria-workspaces) enough, or do you need your own deployment?  Will you start from its configuration and adapt it? | [Egeria Workspaces](/egeria-workspaces) |
 | **Runtime and servers** | How many platforms, and where?  Which servers - at least a [metadata access store](/concepts/metadata-access-store), a [view server](/concepts/view-server), [integration daemons](/concepts/integration-daemon) and an [engine host](/concepts/engine-host)?  The OMAG Server Platform or the single-server runtime?  Containers, Kubernetes or bare metal? | [Planning Runtime Deployment](/guides/planning/runtime/overview) |
-| **Infrastructure** | Where will the PostgreSQL repository and the Apache Kafka [event bus](/concepts/event-bus) run, who looks after them, and how large must they be?  What topic name root will the servers share? | [Planning Runtime Deployment](/guides/planning/runtime/overview), [Monitoring and Tuning Guide](/guides/monitoring/overview) |
+| **Infrastructure** | Where will the PostgreSQL repository and the Apache Kafka [event bus](/concepts/event-bus) run, who looks after them, and how large must they be?  What topic name root will the servers share? | [Planning Runtime Deployment](/guides/planning/runtime/overview), [Monitoring and Tuning Guide](/guides/monitoring) |
 | **Connectors and content** | Which technologies will be catalogued and governed, and which [connectors](/connectors) and [content packs](/content-packs) does that need?  Are any connectors missing, so they must be built? | [Connector Catalog](/connectors), [Developer Guide](/guides/developer) |
 | **Configuration** | How will the platform and server configuration be created, stored and kept under change control?  Which servers start automatically with the platform? | [Administration Guide](/guides/admin) |
-| **Security** | Certificates and TLS, user accounts and passwords, secrets stores, the metadata security connectors, [governance zones](/concepts/governance-zone), and the audit trail of security decisions.  What must change from the shipped samples? | [Planning for Security](/guides/planning/security/overview) (threat model), [Security Guide](/guides/security/overview) (controls and hardening) |
+| **Security** | Certificates and TLS, user accounts and passwords, secrets stores, the metadata security connectors, [governance zones](/concepts/governance-zone), and the audit trail of security decisions.  What must change from the shipped samples? | [Planning for Security](/guides/planning/security) (threat model), [Security Guide](/guides/security) (controls and hardening) |
 | **User interfaces** | Who works with Egeria directly, and through which interface?  Which existing tools will be integrated instead? | [Planning User Interfaces](/guides/planning/user-interfaces/overview), [Integration Guide](/guides/integration) |
-| **Day-to-day operation** | Who starts and stops servers, restarts connectors and tunes their refresh intervals and catalog targets?  Will they use the portal, `hey_egeria`, pyegeria scripts or the REST APIs? | [Operations Guide](/guides/operations/overview) |
-| **Monitoring and maintenance** | Where does the audit log go, and who watches it?  How are Kafka and PostgreSQL monitored?  How often is the repository backed up, and what is the policy for purging soft-deleted metadata? | [Monitoring and Tuning Guide](/guides/monitoring/overview) |
-| **Problem determination** | Who is called when something goes wrong, and what access will they need to logs, the audit log and the infrastructure? | [Diagnostic Guide](/guides/diagnostic/overview) |
+| **Day-to-day operation** | Who starts and stops servers, restarts connectors and tunes their refresh intervals and catalog targets?  Will they use the portal, `hey_egeria`, pyegeria scripts or the REST APIs? | [Operations Guide](/guides/operations) |
+| **Monitoring and maintenance** | Where does the audit log go, and who watches it?  How are Kafka and PostgreSQL monitored?  How often is the repository backed up, and what is the policy for purging soft-deleted metadata? | [Monitoring and Tuning Guide](/guides/monitoring) |
+| **Problem determination** | Who is called when something goes wrong, and what access will they need to logs, the audit log and the infrastructure? | [Diagnostic Guide](/guides/diagnostic) |
 | **Metadata ecosystem** | Which valid values, templates, translations, organization details and governance definitions must be loaded before users arrive? | [Preparing the metadata ecosystem](#preparing-the-metadata-ecosystem), below |
 
 !!! tip "Start small"
@@ -90,16 +90,16 @@ The rest of this *Planning Guide* assumes you are familiar with the basic concep
 These pages focus on setting up the Egeria software and its supporting technology.
 
 * [Planning Runtime Deployment](/guides/planning/runtime/overview) describes how to design your Egeria runtime deployment.
-* [Planning for Security](/guides/planning/security/overview) describes how to build a threat model for Egeria.  The [Security Guide](/guides/security/overview) then describes the controls that answer those threats.
+* [Planning for Security](/guides/planning/security/overview) describes how to build a threat model for Egeria.  The [Security Guide](/guides/security) then describes the controls that answer those threats.
 * [Planning User Interfaces](/guides/planning/user-interfaces/overview) describes the user interfaces that Egeria supplies.
 
 Once the deployment is running, these guides take over:
 
 * The [Administration Guide](/guides/admin) describes how to configure the platform and its servers.
-* The [Operations Guide](/guides/operations/overview) describes how to start and stop servers, and run and tune connectors and governance engines.
-* The [Monitoring and Tuning Guide](/guides/monitoring/overview) describes the audit log, monitoring Kafka and PostgreSQL, and the regular maintenance tasks such as backups and purging deleted metadata.
-* The [Diagnostic Guide](/guides/diagnostic/overview) describes how to find the cause of a problem.
-* The [Security Guide](/guides/security/overview) describes how to assure the security of the deployment.
+* The [Operations Guide](/guides/operations) describes how to start and stop servers, and run and tune connectors and governance engines.
+* The [Monitoring and Tuning Guide](/guides/monitoring) describes the audit log, monitoring Kafka and PostgreSQL, and the regular maintenance tasks such as backups and purging deleted metadata.
+* The [Diagnostic Guide](/guides/diagnostic) describes how to find the cause of a problem.
+* The [Security Guide](/guides/security) describes how to assure the security of the deployment.
 
 ### Preparing the metadata ecosystem
 

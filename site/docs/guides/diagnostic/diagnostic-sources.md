@@ -5,7 +5,7 @@
 
 ## OMAG Server Platform
 
-Figure 1 shows the choices you have when [gathering diagnostics](/guides/diagnostic/overview) for a problem related to the
+Figure 1 shows the choices you have when [gathering diagnostics](/guides/diagnostic) for a problem related to the
 OMAG Server Platform and the servers and services that run on it.
 These are in addition to the diagnostics from the container services, and the services that either call or are
 called by the services running on the OMAG Server Platform.
@@ -20,13 +20,13 @@ Specifically they are:
   connector failures and security violations.  It is the primary source of diagnostics for an OMAG Server,
   its connectors and the Open Metadata Repository Cohort.  Each message has an identifier, such as
   `OMRS-AUDIT-0064`, whose prefix names the component that wrote it, and describes the likely cause and the action to take.
-  Where the records go depends on the server's [audit log destinations](/guides/monitoring/overview#where-audit-log-records-go).
+  Where the records go depends on the server's [audit log destinations](/guides/monitoring#where-audit-log-records-go).
   [More information ...](/guides/diagnostic/ffdc).
 
 * **Status reports** - every server reports its own status, and the integration daemons and engine hosts report the
   status of each connector and governance engine.  These are what the portal's
-  [Egeria Operations](/guides/operations/overview#egeria-operations-in-the-portal) and the
-  [hey_egeria monitors](/guides/operations/overview#hey_egeria-commands) display, and they can be retrieved through the
+  [Egeria Operations](/guides/operations#egeria-operations-in-the-portal) and the
+  [hey_egeria monitors](/guides/operations#hey_egeria-commands) display, and they can be retrieved through the
   [Diagnostic APIs](/guides/diagnostic/diagnostic-apis).
 
 * **Engine actions** - each [engine action](/concepts/engine-action) records its status, completion guards and

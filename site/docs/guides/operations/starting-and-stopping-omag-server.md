@@ -5,14 +5,14 @@
 
 Once a [configuration document](/concepts/configuration-document) has been completed for an [OMAG Server](/concepts/omag-server), the server can be started and stopped in several ways:
 
-* the *Servers* tab of [Egeria Operations](/guides/operations/overview#egeria-operations-in-the-portal);
+* the *Servers* tab of [Egeria Operations](/guides/operations#egeria-operations-in-the-portal);
 * the `hey_egeria_ops tell servers` commands;
 * pyegeria's `RuntimeManager`;
 * the REST APIs.
 
-[Operating servers](/guides/operations/overview#operating-servers) in the Operations Guide compares them.  This page describes the platform services REST calls.  They go straight to one [OMAG Server Platform](/concepts/omag-server-platform) and need no view server, so they suit start-up scripts.
+[Operating servers](/guides/operations#operating-servers) in the Operations Guide compares them.  This page describes the platform services REST calls.  They go straight to one [OMAG Server Platform](/concepts/omag-server-platform) and need no view server, so they suit start-up scripts.
 
-Each call needs a bearer token from the platform's token service (`POST {{baseURL}}/api/token`).  See [REST APIs](/guides/operations/overview#rest-apis) in the Operations Guide.  The token's user must be authorized to operate servers on the platform.
+Each call needs a bearer token from the platform's token service (`POST {{baseURL}}/api/token`).  See [REST APIs](/guides/operations#rest-apis) in the Operations Guide.  The token's user must be authorized to operate servers on the platform.
 
 ## Starting a server
 

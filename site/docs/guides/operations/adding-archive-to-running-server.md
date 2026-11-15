@@ -19,7 +19,7 @@ Archives can also be loaded into a running server without a restart, in any of t
 * the Runtime Manager view service, through a view server;
 * the platform services calls below, which go straight to the platform.
 
-[Loading open metadata archives](/guides/operations/overview#operating-servers) in the Operations Guide compares these options.  Each REST call needs a bearer token from the platform's token service, passed in an `Authorization: Bearer {{token}}` header - see [REST APIs](/guides/operations/overview#rest-apis).
+[Loading open metadata archives](/guides/operations#operating-servers) in the Operations Guide compares these options.  Each REST call needs a bearer token from the platform's token service, passed in an `Authorization: Bearer {{token}}` header - see [REST APIs](/guides/operations#rest-apis).
 
 Typically, an open metadata archive is stored as JSON format in a file. To load such a file use the following command:
 

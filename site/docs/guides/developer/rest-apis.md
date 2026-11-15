@@ -38,7 +38,7 @@ The token service is also available at `{{platformURLRoot}}/servers/{{serverName
 
 Egeria also uses REST APIs to issue synchronous calls between its servers and platforms.  These include the [platform services](/services/platform-services/overview) (`/open-metadata/platform-services/...`), the [administration services](/services/admin-services/overview) (`/open-metadata/admin-services/...`), the server operations (`/open-metadata/server-operations/...`), the repository services (`/servers/{{serverName}}/open-metadata/repository-services/...`), the governance server services (for example `/servers/{{serverName}}/open-metadata/engine-host/...`) and the framework services that support the connectors (for example `/servers/{{serverName}}/open-metadata/access-services/open-metadata-store/...`).
 
-These APIs are called via the [Java clients](/guides/developer/java-clients/overview).  They are considered internal to Egeria and there is no guarantee that they remain backward compatible.  For operating Egeria, the [Runtime Manager](/services/omvs/runtime-manager/overview) view service is the recommended entry point - see [REST APIs](/guides/operations/overview#rest-apis) in the Operations Guide.
+These APIs are called via the [Java clients](/guides/developer/java-clients/overview).  They are considered internal to Egeria and there is no guarantee that they remain backward compatible.  For operating Egeria, the [Runtime Manager](/services/omvs/runtime-manager/overview) view service is the recommended entry point - see [REST APIs](/guides/operations#rest-apis) in the Operations Guide.
 
 ## Finding the API definitions
 

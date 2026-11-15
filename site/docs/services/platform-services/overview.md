@@ -300,7 +300,7 @@ The server type is derived by the platform services when it starts the server.  
 !!! education "Further information"
 
     * The [administration guide](/guides/admin) describes how to use the administration services to configure OMAG Server Platforms and OMAG Servers.
-    * The [operations guide](/guides/operations/overview) describes how to use the platform services to start/stop OMAG Servers on OMAG Server Platforms and retrieve diagnostics.
+    * The [operations guide](/guides/operations) describes how to use the platform services to start/stop OMAG Servers on OMAG Server Platforms and retrieve diagnostics.
 
 ## Dynamically configuring the platform metadata security connector
 

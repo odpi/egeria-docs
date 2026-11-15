@@ -44,7 +44,22 @@ Dr.Egeria includes two types of plug-ins for Obsidian.  The first is a collectio
 
 Obsidian therefore makes a very flexible and easy to use desktop environment for editing, organizing and processing Dr.Egeria forms and reports.
 
+## Writing documents that process cleanly
+
+Dr.Egeria divides a document into blocks at each `#` or `##` heading and at each horizontal rule (`___` or `---`). A block is a command when its first line names a command, such as `## Create Glossary Term`, and each `###` heading inside it is an attribute. A few habits follow from this, and they matter most in long documents that mix commands with explanation:
+
+* **End each command with `___`.** Otherwise a `###` heading in the text that follows is read as one of the command's attributes.
+* **Don't begin a `##` heading with a command word** such as Create, Find, Link or Process unless it is a command.
+* **Commands inside code fences still run.** Fences are a convenient way to show commands in a tutorial, but an example that should not run needs a placeholder, such as `## <Verb> <Object>`.
+* **Write attributes as `###` headings**, not as `Name: value` lines.
+* **Validate before processing.** References to elements that are created further up the same document show as "not found" in validate, and resolve when the document is processed.
+* **Expect documents to be run more than once.** `Create` commands update an element with the same qualified name, but renaming an element creates a new one.
+* **Status filters:** *Limit Result by Status* filters on whether an element is `ACTIVE` or `DELETED`. Lifecycle states such as `DRAFT` have their own filters: Content, Deployment and Activity Status.
+
+The [Dr.Egeria manual](https://github.com/odpi/egeria-python/blob/main/docs/dr_egeria_manual.md#techniques-and-best-practices) explains each of these with examples.
+
 ???+ note "Further Information"
+    * [Dr.Egeria manual: Techniques and Best Practices](https://github.com/odpi/egeria-python/blob/main/docs/dr_egeria_manual.md#techniques-and-best-practices)
     * [Mermaid Diagrams](/user-interfaces/mermaid/overview)
     * [Dr.Egeria Introduction - Part 1](https://github.com/odpi/egeria-python/blob/main/sample-data/egeria-inbox/dr_egeria_intro_part1.md)
     * [Dr.Egeria Introduction - Part 2](https://github.com/odpi/egeria-python/blob/main/sample-data/egeria-inbox/dr_egeria_intro_part2.md)

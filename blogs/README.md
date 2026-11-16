@@ -13,6 +13,11 @@
 3. [You Don't Need to Migrate Everything to Catalog It: Egeria's Growing Connector Library](blog-3-new-connectors)
 4. [Better Data for Everyone: How Coco Pharmaceuticals Puts Egeria's Governance Model to Work](blog-4-coco-pharmaceuticals)
 5. [Standing on the Shoulders of Giants: The Nanny Connectors That Keep AI's Context Trustworthy](blog-5-standing-on-the-shoulders-of-giants)
+6. [Egeria 6.3: A Metadata Platform Built for the Long Run](blog-6-egeria-6-3-release)
+7. [Security Runs on Knowing What You Have: How Egeria 6.3 Supports Security Professionals](blog-7-supporting-security-professionals)
+8. [Building the Data Mesh: Products, Subscriptions, Contracts and the Dependencies Between Them](blog-8-building-the-data-mesh)
+9. [From Pipeline Runs to Business Flows: Extracting the Layers of Lineage](blog-9-business-flows-from-lineage)
+10. [Speaking the Language of Open Data: Exchanging DCAT Documents with Egeria 6.3](blog-10-exchanging-dcat-documents)
 
 ----
 License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),

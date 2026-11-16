@@ -133,4 +133,4 @@ The nanny connectors are still growing. The set of Lovelace services is expandin
 
 *Follow along with the rest of the project at [egeria-project.org](https://egeria-project.org/).*
 
-*Previous: [How Coco Pharmaceuticals Puts Egeria's Governance Model to Work](../blog-4-coco-pharmaceuticals)*
+*Previous: [How Coco Pharmaceuticals Puts Egeria's Governance Model to Work](../blog-4-coco-pharmaceuticals) &middot; Next: [Egeria 6.3: A Metadata Platform Built for the Long Run](../blog-6-egeria-6-3-release)*

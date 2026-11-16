@@ -3,7 +3,7 @@
 
 # Release Notes Overview
 
-Egeria is a large and active project with teams advancing its function on multiple fronts.  Our work is split across [multiple git repositories](https://egeria-project.org/education/tutorials/git-and-git-hub-tutorial/egeria-git-repositories/) that supply components on different release schedules. Therefore, we aim to provide an update on our activities and releases in our monthly newsletter.
+Egeria is a large and active project with teams advancing its function on multiple fronts.  Our work is split across [multiple git repositories](https://egeria-project.org/education/tutorials/git-and-git-hub-tutorial/egeria-git-repositories/) that supply components on different release schedules. Therefore, we aim to provide an update on our activities and releases in our monthly newsletter (see left Navigation).
 
 The [roadmap for Egeria](/release-notes/roadmap) describes the end vision for Egeria and our current status.  
 
@@ -22,23 +22,31 @@ The project aims to produce a new release of Core Egeria about once every 6 week
 
 The table below shows the planned dates for future releases.  The branch date is the date that a copy of the main branch is taken.  This copy is the candidate code for the release.  We then run tests on this copy and release to maven central once any issues have been resolved.  Any fixes that are necessary are made to the main branch and then back-ported to the release branch.  It typically takes a week to go from making the release branch to the new release going to maven central.
 
-| Release | Branch date            | Release Date     | Core theme                                                       |
-|---------|------------------------|------------------|------------------------------------------------------------------|
-| 6.0     | 1st April 2026         | 1st April 2026   | [Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus) |
-| 6.1     | 19th August 2026       | 19th August 2026 | New Egeria Portal                                                |
-| 6.2     | 8th October 2026       | 8th October 2026 | Nanny Connectors, Platform Completeness, Testing                 |
-| 6.3     | Expected December 2026 |                  | Context Intelligence                                             |
+| Release | Branch date                 | Release Date       | Core theme                                                       |
+|---------|-----------------------------|--------------------|------------------------------------------------------------------|
+| 6.0     | 1st April 2026              | 1st April 2026     | [Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus) |
+| 6.1     | 19th August 2026            | 19th August 2026   | New Egeria Portal                                                |
+| 6.2     | 8th October 2026            | 8th October 2026   | Nanny Connectors, Platform Completeness, Testing                 |
+| 6.3     | 16th November 2026          | 17th November 2026 | Performance and Scalability of supporting infrastructure         |
+| 6.4     | Expected Late December 2026 |                    | Context Intelligence Foundations                                 |
+| 7.0     | Expected Mid February 2027  |                    | Platform Upgrade                                                 |
+
+???+ info "Which release to use?"
+    Egeria's codebase is evolving rapidly, in function, stability and performance. If you are starting your Egeria journey, we  recommend that you use the latest release possible, and try to keep up to date with us. 
+
+    We publish SNAPSHOT versions for each PR on the latest release branch.  These are used for testing and are not guaranteed to be stable.  We also make mistakes and can break backward compatibility and even damage your repository as we prove out new functionality and fix bugs on these SNAPSHOT releases.  However, they are invaluable in understanding the behaviour of the next release.  Therefore, we recommend use the SNAPSHOT releases for your own testing and go into production on the release created from the SNAPSHOT.  .
 
 
 !!! attention "Backwards compatibility"
-    The team aims to provide complete backward compatibility for all components that are marked *stable*[^1].
+    The team aims to provide complete backward compatibility from release to release for all components that are marked [*stable*](content-status).  
 
     If backwards compatible changes are not possible, it will be called out explicitly in the release notes with an explanation on how to upgrade.
 
+    For example, release 6.0 included a major rewrite and simplification of the [REST APIs](/services) to use bearer tokens for authentication as well as a consistent set of request and response payloads.  This was a major change and therefore not backwards compatible.  it had knock-on effects into pyegeria.  The result is a cleaner, more consistent API and a more secure platform, which is good for the project.  However we appreciate this will cause a major migration effort for anyone moving from 5.3 to 6.0 and we apologise in advance for the inconvenience.
+
 Each release will also upgrade the level of its dependencies to ensure Egeria is running with all the latest security patches. We therefore recommend that you keep moving forward with us to get the best Egeria experience possible.
 
-Our *main* branch is currently taking code for all future releases. Many of the features are large and the teams integrate code for partial function as soon as it is stable and has no impact on released function. So you will see support for much more function than is officially released. This way you can monitor and feedback on future items as they are developed.
 
-[^1]: To understand more about what it means to have "stable function" see [Egeria content status](content-status).
+Our *main* branch is currently taking code for all future releases. Many of the features are large and the teams integrate code for partial function as soon as it is stable and has no impact on released function. So you will see support for much more function than is officially released. This way you can monitor and feedback on future items as they are developed.
 
 --8<-- "snippets/abbr.md"

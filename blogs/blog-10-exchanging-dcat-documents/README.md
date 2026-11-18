@@ -48,13 +48,17 @@ Here is a minimal description of a dataset with one distribution:
   }
 }
 ```
-This is the view of the loaded air quality data set through [The Catalog](https://egeria-project.org/user-interfaces/the-catalog/overview/) application.  The context diagram is expanded to show the structure of the asset.
+This is the view of the loaded air quality data set through [Resource Locator](https://egeria-project.org/user-interfaces/resource-locator/overview/) application.  This is the typical view a catalog searcher would see.
+
+![An asset catalogued from a DCAT document shown in Resource Locator](resource-locator-dcat-data-set.png)
+
+Digging deeper, this is the view of the loaded air quality data set through [The Catalog](https://egeria-project.org/user-interfaces/the-catalog/overview/) application which allows you to search and browse Egeria's knowledge graph of assets.  The context diagram is expanded to show the structure of the DCAT data set in the knowledge graph.
 
 ![The Catalog showing the dcat data set with context diagram](dcat-air-quality-asset-1.png)
 
 In this next screen shot, the Local Lineage graph is showing the data set and its CSV file.  You can also see the keywords below.
 
-![The Catalog showing the dcat data set with context diagram](dcat-air-quality-asset-1.png)
+![The Catalog showing the dcat data set with context diagram](dcat-air-quality-asset-2.png)
 
 Egeria supports DCAT version 3 in its JSON-LD serialization, as shown. Any arrangement of JSON-LD can be read, whether nested or flattened, and with prefixes or full IRIs. Documents written in Turtle or RDF/XML need converting to JSON-LD first.
 
@@ -89,6 +93,7 @@ There are four ways for a document to arrive:
 3. **Through the REST API of an integration daemon**, for a tool that wants to push documents as it produces them.
 4. **Directly through the Asset Catalog API**, which catalogs the document immediately and returns the identifiers of the assets it created.
 
+
 ## Publishing descriptions out
 
 The other direction starts with a decision: which of our assets do we want the world, or our partners, to know about?
@@ -117,7 +122,6 @@ The publisher is deliberately cautious. If it cannot publish one collection on a
 
 For a single asset, the Asset Catalog API will return its DCAT description on request, whether or not it is in a publishing catalog.
 
-<!-- SCREENSHOT NEEDED: an asset catalogued from a DCAT document shown in The Catalog or Egeria Explorer, e.g. dcat-dataset-in-catalog.png -->
 
 ## How it is put together
 

@@ -99,4 +99,40 @@ The [DCAT connectors :material-github:](https://github.com/odpi/egeria/blob/main
 
 An organization can therefore drop the catalog published by a partner into a directory and have its datasets appear as assets in open metadata, while the assets that its own teams add to a publishing catalog are written out in the standard format for others to harvest.
 
+
+## A worked example
+
+Here is a sample DCAT document describing a dataset.  You can find it in the [egeria-workspaces repository](https://github.com/odpi/egeria-workspaces/tree/main/exchange-quickstart/loading-bay/dcat).
+
+```json
+{
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@id": "https://data.example.org/dataset/air-quality-2026",
+  "@type": "dcat:Dataset",
+  "dct:title": "Air quality measurements 2026",
+  "dct:description": "Hourly readings from the city's monitoring stations.",
+  "dcat:keyword": ["air quality", "environment"],
+  "dcat:distribution": {
+    "@type": "dcat:Distribution",
+    "dct:title": "CSV download",
+    "dcat:downloadURL": { "@id": "https://data.example.org/files/air-quality-2026.csv" }
+  }
+}
+```
+
+When a DCAT document is published to the loading-bay directory of quickstart, it is automatically catalogued in Egeria.  Here is the data set viewed through the [Resource Explorer](/user-interfaces/resource-explorer/overview):
+
+Here is the data set from [The Catalog](/user-interfaces/the-catalog/overview). First we search for it:
+
+![The Catalog showing the data set](air-quality-search-results.png)
+
+And when we select it, we see the details:
+![The Catalog showing the data set](the-catalog-dcat-data-set.png)
+
+The context diagram shows its structure:
+
+![The Catalog showing the data set](dcat-data-set-structure.png)
 --8<-- "snippets/abbr.md"

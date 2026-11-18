@@ -284,7 +284,7 @@ If the user is not authorized to perform operations on a user account, the serve
 
 ## Statements of applicability
 
-A [statement of applicability](/types/4/0423-Security-Definitions#statements-of-applicability) records which controls from a standard apply to the organization, why each one is included or excluded, and how far each one has been implemented.  It is one of the main documents reviewed when an information security management system is audited for ISO/IEC 27001 certification.
+A [statement of applicability](/concepts/statement-of-applicability) records which controls from a standard apply to the organization, why each one is included or excluded, and how far each one has been implemented.  It is one of the main documents reviewed when an information security management system is audited for ISO/IEC 27001 certification.
 
 The statement is a *StatementOfApplicability* element.  Each control from the standard is described by a [governance definition](/concepts/governance-definition), and is linked to the statement with a *ControlApplicability* relationship that records its applicability.
 

@@ -18,6 +18,8 @@ An accurate inventory is the foundation for almost every technical security cont
 
 The same inventory serves the IT infrastructure team, the data governance team (which needs to know where data lives), the privacy team (which needs to know which systems hold personal data) and the business (which needs to know what its information supply chains depend on).  It is worth maintaining it once, in a place they can all use.
 
+An inventory of information and the other assets associated with it, each with an owner, is also one of the controls that standards such as ISO/IEC 27001 expect, and the scope of an information security management system is defined in terms of it.  A catalog that is maintained as part of deployment is evidence that this control operates continuously, not just in the weeks before an audit.  The catalogued systems are also what a [statement of applicability](/concepts/statement-of-applicability) is scoped to, and what the risks in the risk register are scoped to.
+
 ## Cataloguing as part of deployment
 
 The most reliable time to capture information about a deployment is when it is happening, because the pipeline doing the deployment already knows what it is deploying, where, and what it was built from.

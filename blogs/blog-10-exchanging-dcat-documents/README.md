@@ -48,6 +48,13 @@ Here is a minimal description of a dataset with one distribution:
   }
 }
 ```
+This is the view of the loaded air quality data set through [The Catalog](https://egeria-project.org/user-interfaces/the-catalog/overview/) application.  The context diagram is expanded to show the structure of the asset.
+
+![The Catalog showing the dcat data set with context diagram](dcat-air-quality-asset-1.png)
+
+In this next screen shot, the Local Lineage graph is showing the data set and its CSV file.  You can also see the keywords below.
+
+![The Catalog showing the dcat data set with context diagram](dcat-air-quality-asset-1.png)
 
 Egeria supports DCAT version 3 in its JSON-LD serialization, as shown. Any arrangement of JSON-LD can be read, whether nested or flattened, and with prefixes or full IRIs. Documents written in Turtle or RDF/XML need converting to JSON-LD first.
 

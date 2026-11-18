@@ -38,6 +38,22 @@ The governance definitions fall into four layers.
 !!! summary "Usage"
     Following the links from any control back through the policy to the risk and threat behind it answers the question *why do we do this?*  Following them forwards from a risk shows *what are we doing about it, and is it working?*  A risk with no policy, or a policy with no control, is a gap that is visible in the model.
 
+## The statement of applicability
+
+A framework that comes with a reference set of controls raises a question for every one of them: does this control apply to us and, if it does, have we implemented it?  ISO/IEC 27001 requires the answers to be recorded in a [statement of applicability](/concepts/statement-of-applicability), which lists the controls that the organization has chosen, why each is included, whether it is implemented, and why any of the Annex A controls have been left out.  It is the bridge between the risk assessment and the controls, and it is one of the main documents reviewed at a certification audit.
+
+In Egeria the statement is built from the definitions that the strategy already contains:
+
+1. **Load the controls from the framework.**  Each control in the reference set becomes a governance control in the `Security` governance domain.  The NIST catalogs are supplied in the [Security Content Pack](/content-packs/security-content-pack/overview).  For ISO/IEC 27001, create the Annex A controls from your licensed copy of the standard, identifying each with its number and title and describing it in your own words.
+2. **Create the statement.**  It records the scope of the ISMS, its authors, version and review date.  Link it to the certification type for the framework, and to the organization, sites and systems that are in scope.
+3. **Assess each control.**  Link the statement to the control, recording whether it applies, the justification, the reasons for including it, how far it has been implemented and how.  A control that does not apply is still linked, with the justification for excluding it.
+4. **Connect the controls to the strategy.**  Link each control to the obligation or other policy that it implements, and to the risks it treats.  This is what turns "risk treatment" from a phrase in a justification column into a link that can be followed to the entry in the risk register.
+
+The statement does not have to be completed in one pass.  It is usual to begin with the controls that respond to the most important risks and add the rest as they are assessed.  As work proceeds, the implementation status of each control is updated, and the proportion of applicable controls that are implemented becomes a governance metric for the program.
+
+!!! summary "Usage"
+    The statement of applicability shows the state of the security program on one page: which controls apply, which are in place and which still need work.  [Egeria Explorer](/user-interfaces/egeria-explorer/overview) summarizes it and filters the controls by status, applicability and inclusion reason, so the security team can use the same view to plan its work and to answer an auditor.
+
 ## Security levels and classification
 
 Most security strategies define a set of levels that systems and data are organized into, depending on how sensitive or critical they are.  The strategy then sets out what a system owner must do at each level - for example, the strength of authentication required, how often access is reviewed, whether data must be encrypted, and how quickly patches must be applied.  This means that individual owners do not have to work out the right protection for each system from first principles.
@@ -59,10 +75,10 @@ Recording these as links between the security definitions and the definitions in
 
 ## Creating the definitions
 
-The definitions are typically written as [Dr.Egeria](/user-interfaces/dr-egeria/overview) Markdown documents, which can be reviewed and edited by the security team before they are loaded into Egeria.  They can also be maintained through the [Governance Officer API](/services/omvs/governance-officer/overview), and viewed through [Egeria Explorer](/user-interfaces/egeria-explorer/overview).  The [Security Officer API](/services/omvs/security-officer/overview) is used to set up the governance zones and security access controls that protect open metadata itself.
+The definitions are typically written as [Dr.Egeria](/user-interfaces/dr-egeria/overview) Markdown documents, which can be reviewed and edited by the security team before they are loaded into Egeria.  They can also be maintained through the [Governance Officer API](/services/omvs/governance-officer/overview), and viewed through [Egeria Explorer](/user-interfaces/egeria-explorer/overview).  The [Security Officer API](/services/omvs/security-officer/overview) maintains the statement of applicability, and is also used to set up the governance zones and security access controls that protect open metadata itself.  Dr.Egeria has `Create Statement of Applicability` and `Link Control Applicability` commands, so the statement can be drafted, reviewed and loaded as a document like the rest of the strategy.
 
 ## Example
 
-[Building a data security strategy](/practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview) shows how Coco Pharmaceuticals' security team builds its strategy around ISO/IEC 27001, linking the new principle, obligations, approach, certification and metrics to the drivers and risks that the governance leaders had already defined.
+[Building a data security strategy](/practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview) shows how Coco Pharmaceuticals' security team builds its strategy around ISO/IEC 27001, linking the new principle, obligations, approach, certification and metrics to the drivers and risks that the governance leaders had already defined.  The [statement of applicability](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/4.%20keeping-safe/statement-of-applicability.md) workbook in Egeria Workspaces is the Dr.Egeria document for the first fifteen Annex A controls assessed by Simon Burr, the Chief Information Security Officer.
 
 --8<-- "snippets/abbr.md"

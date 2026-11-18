@@ -71,7 +71,7 @@ The *SecurityListMembership* classification summarizes the list of security grou
 
 ## SecurityTags classification
 
-*SecurityTags* identify labels and properties that are used in determining which access control rules should be executed when access to a particular resource is requested.  They can be attached to [assets](/types/0/0010-Base-Model), [schema elements](/types/5/0501-Schema-Elements) and [glossaries](/types/3/0310-Glossary) depending on the scope of resource that the security tags apply to. The [synchronized access control](/features/synchronized-access-control) feature describes how security tags are set up and used.
+*SecurityTags* identify labels and properties that are used in determining which access control rules should be executed when access to a particular resource is requested.  They can be attached to [assets](/types/0/0010-Base-Model), [schema elements](/types/5/0501-Schema-Elements) and [glossaries](/types/3/0310-Glossary) depending on the scope of resource that the security tags apply to. The [synchronized access control](/features/synchronized-access-control/overview) feature describes how security tags are set up and used.
 
 * *securityLabels* - Labels that apply to the referenceable.
 * *securityProperties* - Properties that apply to the referenceable.
@@ -119,6 +119,7 @@ The *ControlImplementationStatus* enumeration defines how far a control listed i
 * *OTHER* - Another implementation status.
 
 !!! education "Further information"
+    * The [statement of applicability](/concepts/statement-of-applicability) concept describes how these types are used.
     * Statements of applicability are maintained through the [Security Officer API](/services/omvs/security-officer/overview#statements-of-applicability).
     * The Core Content Pack includes a *CertificationType* for ISO/IEC 27001:2022, with the qualified name `CertificationType::ISO/IEC 27001:2022`.  The text of the standard belongs to ISO, so its Annex A controls are not supplied.
     * The [Security Content Pack](/content-packs/security-content-pack/overview) supplies the NIST CSF 2.0 and NIST SP 800-53 Rev. 5 control catalogs as governance controls that can be linked to a statement of applicability.

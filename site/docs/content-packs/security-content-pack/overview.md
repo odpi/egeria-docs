@@ -3,7 +3,7 @@
 
 # Security Content Pack
 
-The *SecurityContentPack* contains two standard security control catalogs: the NIST Cybersecurity Framework (CSF) 2.0 and NIST SP 800-53 Revision 5.  They give a security team a ready-made set of controls to link to a [statement of applicability](/types/4/0423-Security-Definitions#statements-of-applicability), to use as mitigations in a [threat model](/egeria-solutions/threat-modelling/overview), or to map the organization's own controls to.
+The *SecurityContentPack* contains two standard security control catalogs: the NIST Cybersecurity Framework (CSF) 2.0 and NIST SP 800-53 Revision 5.  They give a security team a ready-made set of controls to link to a [statement of applicability](/concepts/statement-of-applicability), to use as mitigations in a [threat model](/egeria-solutions/threat-modelling/overview), or to map the organization's own controls to.
 
 Unlike the [Core Content Pack](/content-packs/core-content-pack/overview), it is not loaded automatically.  Load it into a metadata access store with the [Runtime Manager API](/services/omvs/runtime-manager/overview) when it is needed, or add it to the server's start-up archives.  It depends on the Core Content Pack.
 

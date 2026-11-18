@@ -34,6 +34,30 @@ Egeria is not a security tool in the sense of a firewall, a SIEM or a penetratio
 
 The solutions build on one another.  The security strategy sets out the policies and controls; threat modelling identifies the risks they must address; proactive cataloguing keeps the inventory of what must be protected up to date; and incident management closes the loop by feeding what was learned back into the risks and controls.  Auditing users and distributed secrets protect Egeria itself, along with the systems it connects to.
 
+## Working towards ISO/IEC 27001 certification
+
+ISO/IEC 27001 is the international standard for an *information security management system* (ISMS).  Certification against it is often a condition of doing business, and the work of achieving it - and then keeping it through the surveillance audits that follow - falls to the security team.
+
+The standard does not ask for a particular set of security tools.  It asks an organization to show that it understands what it needs to protect, has assessed its risks, has chosen controls in response to those risks, operates them, and checks that they are working.  Most of the effort goes into keeping the evidence for this consistent: the asset inventory, the risk register, the policies, the [statement of applicability](/concepts/statement-of-applicability) and the records of incidents and reviews are typically separate documents that refer to one another by name and drift apart between audits.
+
+In Egeria these are linked elements in open metadata, so each of the Keeping Safe solutions contributes a part of the ISMS, and the links between them are the traceability that an auditor looks for.
+
+| What the standard expects | How Egeria supports it | Solution |
+|---|---|---|
+| The scope of the ISMS is defined, and the information assets in it are known and owned. | The systems, data, software and owners are catalogued as they are deployed.  The certification type records the scope, and the statement of applicability is linked to the organization, sites and systems it covers. | [Proactive Cataloguing](/egeria-solutions/proactive-cataloguing/overview) |
+| Legal, regulatory and contractual requirements are identified. | Each regulation and contract is modelled with the requirements that matter to the organization, and linked to the policies that respond to it. | [Assessing a new regulation](/egeria-solutions/assessing-new-regulation/overview) |
+| There is an information security policy, with objectives and assigned responsibilities. | Principles, obligations and approaches are governance policies, linked to the governance roles responsible for them and to the metrics that measure them. | [Defining the Security Strategy](/egeria-solutions/defining-security-strategy/overview) |
+| Risks are assessed in a consistent way, and a treatment is chosen for each one. | Risks are recorded with their likelihood and impact, scoped to the systems they threaten, and linked to the controls that treat them.  Together they form the risk register. | [Threat Modelling](/egeria-solutions/threat-modelling/overview) |
+| The chosen controls are compared with Annex A, and the result is recorded in a statement of applicability. | The statement of applicability links to each control with its applicability, justification and implementation status.  It is displayed, summarized and filtered in Egeria Explorer. | [Defining the Security Strategy](/egeria-solutions/defining-security-strategy/overview#the-statement-of-applicability) |
+| Access to systems is controlled and reviewed, and authentication information is protected. | For the open metadata ecosystem itself: user accounts are checked against known identities, and secrets are held in secrets stores. | [Auditing Users](/egeria-solutions/auditing-users/overview) and [Distributed Secrets](/egeria-solutions/distributed-secrets/overview) |
+| Incidents are reported, assessed, responded to and learned from, with the evidence kept. | Incident reports are linked to the affected resources and record the investigation.  What is learned is fed back to the risks and controls. | [Incident Management](/egeria-solutions/incident-management/overview) |
+| The ISMS is monitored, audited internally, reviewed by management and improved. | Governance metrics measure the program.  The statement of applicability shows the state of each control and when it was last reviewed, and each version presented for audit is recorded. | All of the above |
+
+This does not make certification automatic.  The controls still have to be operated, and an auditor will want to see them working, not just described.  What Egeria changes is the cost of showing it: a question such as *why is this control excluded?*, *which risk does it treat?* or *which systems does it protect?* is answered by following a link, and the answer is the same one the security team works from every day.
+
+!!! info "The text of the standard"
+    ISO/IEC 27001 is copyrighted by ISO and IEC, so Egeria does not supply its Annex A controls.  The [Core Content Pack](/content-packs/core-content-pack/overview) includes the certification type for ISO/IEC 27001:2022, and you create a governance control for each Annex A control from your licensed copy of the standard.  The public-domain NIST Cybersecurity Framework 2.0 and NIST SP 800-53 Rev. 5 catalogs are supplied in the [Security Content Pack](/content-packs/security-content-pack/overview), and can be used in a statement of applicability in the same way.
+
 ## Before you begin
 
 An organization's security is not the act of a single security team, nor is it provided by the presence of security software, although both play their part.  To use a clich&eacute;, security is everyone's business. So the aim of a security program is to raise awareness that everyone's actions matter.  Anyone can compromise security through careless management of passwords, missing a software test case, failing to upgrade a software package, etc. Secure practices and feedback need to be provided to all employees and external partners.
@@ -51,7 +75,7 @@ Egeria's security and assurance solutions provide comprehensive information gath
 
 ## Examples showing how to use Egeria's security and assurance solutions
 
-* [Building a data security strategy](/practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview) for Coco Pharmaceuticals around the ISO/IEC 27001 information security management system standard, linked into the company's wider governance program.
+* [Building a data security strategy](/practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview) for Coco Pharmaceuticals around the ISO/IEC 27001 information security management system standard, linked into the company's wider governance program.  Its [statement of applicability](/concepts/statement-of-applicability) is one of the Coco Pharmaceuticals workbooks in [Egeria Workspaces](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/4.%20keeping-safe/statement-of-applicability.md).
 * [Assuring IT Systems Security](/practices/coco-pharmaceuticals/scenarios/assuring-it-systems-security/overview), drawing on the security monitoring and testing experience of two acquired companies to extend protection across the original Coco Pharmaceuticals systems.
 * [Understanding the new UK Terrorism (Protection of Premises) Act 2025 (aka Martyn's Law)](/practices/coco-pharmaceuticals/scenarios/preparing-for-martyns-law/overview) and how it impacts Coco Pharmaceutical's annual conference in London.
 * Ensure the [auditability of IT System users](/practices/coco-pharmaceuticals/scenarios/auditing-it-system-users/overview) and their access to data, keeping open metadata safe and trusted.

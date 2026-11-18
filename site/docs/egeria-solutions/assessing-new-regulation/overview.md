@@ -83,6 +83,8 @@ Finally, Dr.Egeria supports the management of projects that can be used to organ
 
 This guide provides an overview of how to use Dr.Egeria to assess new regulations and manage the effort required to support them.  It covers the three main types of policy, organizing your definitions, and managing the effort required to support the regulation.
 
+The same method applies to a standard that the organization has chosen to be certified against.  ISO/IEC 27001, for example, expects an organization to identify the legal, regulatory and contractual requirements that affect its information security, which is what this solution produces.  A standard that has its own reference set of controls adds a further step: recording which of them apply in a [statement of applicability](/concepts/statement-of-applicability), described in [Defining the Security Strategy](/egeria-solutions/defining-security-strategy/overview#the-statement-of-applicability).
+
 The fully worked example is available in [Egeria Workspaces](https://github.com/odpi/egeria-workspaces/tree/main/coco-workbooks/4.%20keeping-safe/martyns-law).
 
 --8<-- "snippets/abbr.md"

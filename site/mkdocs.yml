@@ -82,6 +82,7 @@ nav:
           - Egeria Explorer: user-interfaces/egeria-explorer/overview.md
           - Lineage Explorer: user-interfaces/lineage-explorer/overview.md
           - Data Mesh: user-interfaces/data-mesh/overview.md
+          - Resource Locator: user-interfaces/resource-locator/overview.md
           - The Catalog: user-interfaces/the-catalog/overview.md
           - Egeria Operations: user-interfaces/egeria-operations/overview.md
           - Egeria Audit: user-interfaces/egeria-audit/overview.md
@@ -156,6 +157,7 @@ nav:
               - PostgreSQL and Kafka: guides/diagnostic/postgresql-and-kafka-diagnostic-guide.md
       - Developer Guide:
           - Developer Guide: guides/developer/index.md
+          - Egeria's git repositories: /education/tutorials/git-and-git-hub-tutorial/egeria-git-repositories.md
           - Retrieving Metadata: guides/developer/finding-metadata/overview.md
           - Maintaining Metadata: guides/developer/maintaining-metadata/overview.md
           - Mapping Technology:
@@ -325,6 +327,7 @@ nav:
               - Running the Platform in IntelliJ: education/tutorials/intellij-run-omag-server-platform.md
           - Tools:
               - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
+              - Further Git Tips: education/tutorials/git-and-git-hub-tutorial/further-git-tips.md
               - Using Docker: education/tutorials/docker-tutorial/overview.md
               - Using Jupyter: education/tutorials/jupyter-tutorial/overview.md
               - Using Swagger: education/tutorials/swagger-tutorial/overview.md
@@ -944,6 +947,7 @@ nav:
       - Solution Component: concepts/solution-component.md
       - Solution Role: concepts/solution-role.md
       - Specification: concepts/specification.md
+      - Statement of Applicability: concepts/statement-of-applicability.md
       - Storage Volume: concepts/storage-volume.md
       - Subject Area: concepts/subject-area.md
       - Survey Report: concepts/survey-report.md

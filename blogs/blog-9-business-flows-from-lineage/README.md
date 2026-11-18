@@ -102,11 +102,15 @@ Retrieve an information supply chain from Egeria and it comes with a set of diag
 
 Each is drawn with the solution components and products that its elements implement shown alongside, so you can always see which part of the design a piece of infrastructure or a table belongs to.
 
-<!-- SCREENSHOT NEEDED: the system fabric or data fabric view of an information supply chain, e.g. isc-data-fabric.png -->
+![The Data Fabric](isc-data-fabric.png)
 
-For exploring lineage from a single asset outwards, the lineage graph in 6.3 is bounded to a number of hops that you choose, with a marker where the lineage continues. And the [Data Mesh application](https://egeria-project.org/user-interfaces/data-mesh/overview/) described in the [previous post](../blog-8-building-the-data-mesh) highlights the products that take part in a chosen supply chain.
+For exploring lineage from a single asset outwards, the lineage graph in 6.3 is bounded to a number of hops that you choose, with a marker where the lineage continues. 
 
-<!-- SCREENSHOT NEEDED: Lineage Explorer showing a lineage graph with the hop-limit control, e.g. lineage-explorer-hops.png -->
+![The lineage graph with the hop-limit control](lineage-explorer-hops.png)
+
+And the [Data Mesh application](https://egeria-project.org/user-interfaces/data-mesh/overview/) described in the [previous post](../blog-8-building-the-data-mesh) highlights the products that take part in a chosen supply chain.
+
+![The Data Mesh application with one information supply chain highlighted in gold and the rest of the graph dimmed](data-mesh-new-employee-isc.png)
 
 ## Why go to this trouble
 

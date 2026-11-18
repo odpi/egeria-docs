@@ -54,6 +54,9 @@ Once an incident is closed, the incident report remains as a record of what happ
 !!! summary "Usage"
     Incident management closes the loop in the security program.  The strategy defines the controls, threat modelling identifies the risks, and incidents show where reality differs from the plan.  Feeding what is learned back into the risks and controls is what makes the program improve over time rather than simply respond.
 
+!!! info "Incident management and ISO/IEC 27001"
+    The controls in Annex A of ISO/IEC 27001 cover preparing for incidents, assessing and responding to them, learning from them and collecting evidence.  The incident reports, with their status, note logs and links to the affected resources, are the record that shows these controls operating.  When an incident reveals that a control is weaker than was believed, update its implementation status and description in the [statement of applicability](/concepts/statement-of-applicability), so that the statement continues to describe what is really in place.
+
 ## Example
 
 Coco Pharmaceuticals' [data security strategy](/practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview) includes the obligation that *Security Incidents Must Be Logged, Reported, and Reviewed*, measured by the *Security Incident Mean Time to Containment* metric.  The company's earlier experience of [investigating suspicious activity](/practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview) around its supplier database showed how much harder an investigation is when the information needed is scattered across spreadsheets and personal knowledge.

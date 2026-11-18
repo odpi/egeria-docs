@@ -117,6 +117,9 @@ The output of a threat modelling session is recorded as governance definitions s
 
 When the systems change, the risks scoped by the affected components show what needs to be revisited, and when a new threat emerges, the risks and controls that relate to it - and the parts of the system they apply to - can be found by following the links.
 
+!!! info "Threat modelling and ISO/IEC 27001"
+    ISO/IEC 27001 expects risks to be assessed in a repeatable way and a treatment to be chosen for each one.  The risk register built here is that assessment: each risk has an owner, a likelihood and an impact recorded against the same scales, and the systems it is scoped to.  The controls linked to each risk are its treatment, and they are the controls that appear in the [statement of applicability](/concepts/statement-of-applicability) with *risk treatment* as the reason for their inclusion.  An auditor who picks a control from the statement can be shown the risks behind it, and one who picks a risk can be shown the controls that treat it.
+
 !!! summary "Usage"
     Keeping the threat model in open metadata turns it from a design-time artefact into a living part of the security program.  A risk that has no policy responding to it shows up as a gap in the links, and so does a critical component with no risks scoped to it, which has probably never been reviewed.
 

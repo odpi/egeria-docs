@@ -36,7 +36,7 @@ Ivor, Sidney and Si write the strategy together.  They agree that it should not 
 The strategy is captured as a set of [governance definitions](/concepts/governance-definition) in the `Security` [governance domain](/concepts/governance-domain).
 
 ???+ info "Governance principle"
-    **Risk-Based Information Security Management** - security controls are selected and prioritised according to a documented assessment of risk, not applied uniformly.  This is the same discipline the security team uses to rate entries in the risk register, now applied inside the ISMS, with each control in the *Statement of Applicability* traceable to the risk that justifies it.
+    **Risk-Based Information Security Management** - security controls are selected and prioritised according to a documented assessment of risk, not applied uniformly.  This is the same discipline the security team uses to rate entries in the risk register, now applied inside the ISMS, with each control in the [*Statement of Applicability*](/concepts/statement-of-applicability) traceable to the risk that justifies it.
 
 ???+ info "Governance obligations"
     * **Information Assets Must Be Inventoried and Classified for the ISMS** - every asset in scope must appear in an asset inventory and be classified for its confidentiality, integrity and availability requirements.  The classification must stay consistent with the personal data classification owned by the privacy team.

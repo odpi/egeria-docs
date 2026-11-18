@@ -40,6 +40,9 @@ Secrets store connectors are pluggable, so organizations that use an enterprise 
 !!! summary "Usage"
     Distributed secrets reduce the number of places that a secret is stored to one, put that place under the control of the people responsible for it, and allow secrets to be rotated without reconfiguring Egeria.  This keeps the open metadata ecosystem from becoming a weak point in the organization's security.
 
+!!! info "Distributed secrets and ISO/IEC 27001"
+    Keeping secrets out of configuration and metadata, and under the control of the people responsible for them, supports the controls in ISO/IEC 27001's Annex A for protecting authentication information.  It is part of what the security team can describe when it records how those controls are implemented in its [statement of applicability](/concepts/statement-of-applicability).
+
 !!! education "Further information"
     * [Open Metadata Security](/features/metadata-security/overview) describes the security connectors and secrets stores.
     * [Configuring the OMAG Server Platform](/guides/admin/configuring-the-omag-server-platform) shows how to set the location of the platform's user directory.

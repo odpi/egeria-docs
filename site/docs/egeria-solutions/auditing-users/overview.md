@@ -38,6 +38,9 @@ The same operations are available through the [Security Officer API](/services/o
 !!! summary "Usage"
     Auditing users keeps the access to open metadata aligned with the people and processes that genuinely need it.  It turns the obligation that *all users must be authenticated and accountable* into a routine, evidenced check rather than an occasional clean-up.
 
+!!! info "Auditing users and ISO/IEC 27001"
+    ISO/IEC 27001's Annex A includes controls for managing identities, protecting authentication information and reviewing access rights.  The exceptions raised by the audit checks, and the record of how each was resolved, are evidence that these controls operate for the open metadata ecosystem.  They can be cited in the implementation description of those controls in the [statement of applicability](/concepts/statement-of-applicability).  The same controls need to be evidenced for the organization's other systems using their own identity management tools.
+
 ## Example
 
 [Auditing IT System Users](/practices/coco-pharmaceuticals/scenarios/auditing-it-system-users/overview) shows the Coco Pharmaceuticals security team using Egeria Audit after a fraud in which accounts of employees who had left the company were used to add false supplier records and invoices.  The screenshots in that scenario are taken from the [Quickstart](/egeria-workspaces/quick-start/overview) demo environment.

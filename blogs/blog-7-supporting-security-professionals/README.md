@@ -26,6 +26,22 @@ Nobody should invent a security program from scratch, and Egeria does not ask yo
 
 Every control is an element in the graph. That is the point of loading them. A control in a PDF can only be read. A control in the graph can be linked to the policy that requires it, the system it protects, the person accountable for it and the evidence that it works.
 
+## Maintain a folio of your work
+
+A folio is a collection of documents that support a particular activity or project. In the context of security, a folio can be used to keep track of the controls that are relevant to your organization, the policies that require them, the systems they protect, the people accountable for them, and the evidence that they work. By maintaining a folio, you can ensure that all relevant information is easily accessible and up-to-date.
+
+Here is the folio of [Coco Pharmaceuticals](https://egeria-project.org/practices/coco-pharmaceuticals/) cyber security expert [Simon Burr](https://egeria-project.org/practices/coco-pharmaceuticals/personas/simon-burr/).
+
+![Security officer folio - page 1](security-officer-folio.png)
+
+More detail from further down the page.
+
+![Security officer folio - page 2](security-officer-folio-controls.png)
+
+Finally, other linkage to elements such as the statement of applicability.
+
+![Security Officer Linkage](security-officer-linkage.png)
+
 ## The statement of applicability, kept alive
 
 If your organization is certified to ISO/IEC 27001, or working towards it, you maintain a statement of applicability: the list of controls, whether each applies to you, why, and how far it has been implemented. It is one of the main documents an auditor reviews, and it is usually a spreadsheet.
@@ -34,7 +50,14 @@ Egeria 6.3 has a [statement of applicability](https://egeria-project.org/service
 
 What makes this more than a spreadsheet in a database is that the controls it refers to are the same elements that your policies, systems and risks are linked to. When a control's implementation changes, there is one place to record it. A certification type for ISO/IEC 27001:2022 is supplied, so the certification itself can be recorded against the organization and the systems it covers.
 
-<!-- SCREENSHOT NEEDED: a statement of applicability with its linked controls, or a NIST control folder, in Egeria Explorer, e.g. statement-of-applicability.png -->
+The image below shows an example statement of applicability for [Coco Pharmaceuticals](https://egeria-project.org/practices/coco-pharmaceuticals/).  It shows a summary of the implementation status.
+
+![Statement of Applicability](statement-of-applicability.png)
+
+As you scroll down the page, the details of the associated security controls are shown.  The **View** button allows you to navigate to an individual control to investigate further.
+
+![Statement of Applicability Controls](statement-of-applicability-implemented-controls.png)
+
 
 ## Threat models that stay connected to the systems
 
@@ -48,6 +71,14 @@ Egeria's approach to [threat modelling](https://egeria-project.org/egeria-soluti
 - Each **mitigation** is a policy or control linked to the risks it addresses. It can be one of your own, or one from the NIST catalogs.
 
 Once the model is linked like this, the gaps show themselves. A risk with no control responding to it is a gap in the links. So is a critical component with no risks scoped to it, which has probably never been reviewed. And when a system changes, the risks scoped to it tell you what to look at again. A template for [Dr.Egeria](https://egeria-project.org/user-interfaces/dr-egeria/overview/), our markdown-based authoring tool, walks through a STRIDE review step by step.
+
+The screenshot below shows a threat model for one of [Coco Pharmaceuticals](https://egeria-project.org/practices/coco-pharmaceuticals/) systems.  Examples of the workbooks created by their CISO can be found on GitHub at [https://github.com/odpi/egeria-workspaces/tree/main/coco-workbooks/4. keeping-safe](https://github.com/odpi/egeria-workspaces/tree/main/coco-workbooks/4.%20keeping-safe).
+
+![Example of a threat model](threat-model-solution-blueprint.png)
+
+The threat model lis linked to the system in the system inventory:
+
+![Threat model linked to system](from-system-to-threat-model.png)
 
 ## A home for security test results
 

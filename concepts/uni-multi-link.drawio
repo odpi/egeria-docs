@@ -1,0 +1,102 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2" pages="3">
+  <diagram id="mArv101Qo0KCMiXSAoCN" name="uni-link-relationship-category">
+    <mxGraphModel dx="1234" dy="817" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="S5lS58ZmbvXcH93iUld8-0" />
+        <mxCell id="S5lS58ZmbvXcH93iUld8-1" parent="S5lS58ZmbvXcH93iUld8-0" />
+        <mxCell id="DtpTIzOCeMmpTPn8PCf4-4" edge="1" parent="S5lS58ZmbvXcH93iUld8-1" source="DtpTIzOCeMmpTPn8PCf4-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;curved=1;" target="DtpTIzOCeMmpTPn8PCf4-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DtpTIzOCeMmpTPn8PCf4-6" edge="1" parent="S5lS58ZmbvXcH93iUld8-1" source="DtpTIzOCeMmpTPn8PCf4-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" target="DtpTIzOCeMmpTPn8PCf4-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DtpTIzOCeMmpTPn8PCf4-7" edge="1" parent="S5lS58ZmbvXcH93iUld8-1" source="DtpTIzOCeMmpTPn8PCf4-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" target="DtpTIzOCeMmpTPn8PCf4-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DtpTIzOCeMmpTPn8PCf4-0" parent="S5lS58ZmbvXcH93iUld8-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="140" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="DtpTIzOCeMmpTPn8PCf4-5" edge="1" parent="S5lS58ZmbvXcH93iUld8-1" source="DtpTIzOCeMmpTPn8PCf4-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=1;" target="DtpTIzOCeMmpTPn8PCf4-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DtpTIzOCeMmpTPn8PCf4-1" parent="S5lS58ZmbvXcH93iUld8-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="400" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="DtpTIzOCeMmpTPn8PCf4-2" parent="S5lS58ZmbvXcH93iUld8-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="400" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="DtpTIzOCeMmpTPn8PCf4-3" parent="S5lS58ZmbvXcH93iUld8-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="400" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="DtpTIzOCeMmpTPn8PCf4-8" parent="S5lS58ZmbvXcH93iUld8-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="A second relationship is permitted in the opposite direction" vertex="1">
+          <mxGeometry height="30" width="190" x="60" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="DtpTIzOCeMmpTPn8PCf4-9" parent="S5lS58ZmbvXcH93iUld8-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Each outbound relationship must point to a different element" vertex="1">
+          <mxGeometry height="30" width="140" x="170" y="420" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="reversible-relationship-category" id="yoqSJMWMhlKiCWtDmFzj">
+    <mxGraphModel dx="1234" dy="817" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0nO7P8c6DngMPoOfgGS4-0" />
+        <mxCell id="0nO7P8c6DngMPoOfgGS4-1" parent="0nO7P8c6DngMPoOfgGS4-0" />
+        <mxCell id="0nO7P8c6DngMPoOfgGS4-3" edge="1" parent="0nO7P8c6DngMPoOfgGS4-1" source="0nO7P8c6DngMPoOfgGS4-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" target="0nO7P8c6DngMPoOfgGS4-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0nO7P8c6DngMPoOfgGS4-4" edge="1" parent="0nO7P8c6DngMPoOfgGS4-1" source="0nO7P8c6DngMPoOfgGS4-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" target="0nO7P8c6DngMPoOfgGS4-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0nO7P8c6DngMPoOfgGS4-5" parent="0nO7P8c6DngMPoOfgGS4-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="140" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="0nO7P8c6DngMPoOfgGS4-6" edge="1" parent="0nO7P8c6DngMPoOfgGS4-1" source="0nO7P8c6DngMPoOfgGS4-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;curved=1;" target="0nO7P8c6DngMPoOfgGS4-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0nO7P8c6DngMPoOfgGS4-7" parent="0nO7P8c6DngMPoOfgGS4-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="400" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="0nO7P8c6DngMPoOfgGS4-8" parent="0nO7P8c6DngMPoOfgGS4-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="400" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="0nO7P8c6DngMPoOfgGS4-9" parent="0nO7P8c6DngMPoOfgGS4-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="400" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="0nO7P8c6DngMPoOfgGS4-11" parent="0nO7P8c6DngMPoOfgGS4-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="The direction of the relationship is ignored." vertex="1">
+          <mxGeometry height="30" width="140" x="170" y="420" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="multi-link-relationship-category" id="cDzfMVyEld3g27iBY-yN">
+    <mxGraphModel dx="1234" dy="817" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="7wlQS85bOhZuu2bSo3a3-0" />
+        <mxCell id="7wlQS85bOhZuu2bSo3a3-1" parent="7wlQS85bOhZuu2bSo3a3-0" />
+        <mxCell id="7wlQS85bOhZuu2bSo3a3-2" edge="1" parent="7wlQS85bOhZuu2bSo3a3-1" source="7wlQS85bOhZuu2bSo3a3-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" target="7wlQS85bOhZuu2bSo3a3-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7wlQS85bOhZuu2bSo3a3-3" edge="1" parent="7wlQS85bOhZuu2bSo3a3-1" source="7wlQS85bOhZuu2bSo3a3-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;curved=1;" target="7wlQS85bOhZuu2bSo3a3-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gx39drj_QfzTBQhE5m8Z-0" edge="1" parent="7wlQS85bOhZuu2bSo3a3-1" source="7wlQS85bOhZuu2bSo3a3-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;curved=1;" target="7wlQS85bOhZuu2bSo3a3-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7wlQS85bOhZuu2bSo3a3-4" parent="7wlQS85bOhZuu2bSo3a3-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="140" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="7wlQS85bOhZuu2bSo3a3-6" parent="7wlQS85bOhZuu2bSo3a3-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="414" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="7wlQS85bOhZuu2bSo3a3-9" parent="7wlQS85bOhZuu2bSo3a3-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Many relationships of this type are permitted." vertex="1">
+          <mxGeometry height="30" width="140" x="270" y="290" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

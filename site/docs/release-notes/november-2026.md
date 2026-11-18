@@ -80,10 +80,12 @@ Learn more about [relationship purpose](https://egeria-project.org/concepts/rela
 
 Egeria Workspaces, our ready-to-run environment, has kept pace with the 6.3 work, and its portal has grown.
 
+- **Statements of applicability can be explored in Egeria Explorer**, starting with Coco's sample for ISO/IEC 27001. It shows how far each control has been implemented.
 - **Resource Locator** is a new app for finding resources, not just data. It shows what a resource contains and what it means, and supports work lists, team sharing and private notes.
 - **Relationships and classifications are grouped by purpose** throughout the portal, in Egeria Explorer, the Data Mesh view and The Catalog, so a busy element is much easier to read.
 - **Lineage controls** let you choose how many hops of lineage to show, and every diagram has an Expand button that opens it in a viewer you can pan and zoom.
 - **Dashboards and report specifications are now held in Egeria** as open metadata, organized in folders by the tools that use them, so they can be shared, secured by governance zone and reused rather than living in local files. New tutorials cover report specs, analytic functions, local dashboards and saved queries.
+- **The Overview now only shows numbers it has measured**, and results say when more may exist.
 - **Airflow and Marquez start with the demo**, and Airflow's Open Lineage events flow into Egeria, so you can watch lineage arrive from running pipelines.
 - **Every column and pane in the portal can be resized**, and your choices are remembered.
 
@@ -91,9 +93,15 @@ For those running their own environment, a new `egeria-upgrade-reset` tool plans
 
 You can [try the live demo](https://egeria.pdr-associates.com){target=blank} without installing anything (signing up takes a minute), or run [Egeria Workspaces](https://egeria-project.org/egeria-workspaces/) locally with Docker or Podman.
 
+## Technical preview: Resource Explorer, Egeria Advisor and Studio
+
+The AI applications on Trellis are released alongside Egeria 6.3 as a technical preview. Resource Explorer now publishes what it finds into Egeria and runs its surveys on Egeria's own engine host. Egeria Advisor works with the same dashboards and report specifications held in Egeria as the portal does, and the new Studio application is for authoring them. You can try Resource Explorer and Egeria Advisor on the [live demo](https://egeria.pdr-associates.com){target=blank}. Please tell us what works for you.
+
 ## pyegeria and Dr.Egeria
 
 pyegeria, our Python client, and Dr.Egeria, which turns markdown documents into metadata, have followed the new function in 6.3. There are new Dr.Egeria commands and templates for statements of applicability, business capabilities, report specifications, measurements and dashboards, and for setting an element's governance zones. Reports can be produced as documents and as DCAT catalogs, and searches now page through complete results and say so plainly when a result has been capped.
+
+Install or upgrade with `pip install -U pyegeria`. The [pyegeria release notes](https://github.com/odpi/egeria-python/tree/main/docs/release-notes){target=blank} describe each release.
 
 ## Full release notes for V6.3
 

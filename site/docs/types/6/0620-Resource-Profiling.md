@@ -17,9 +17,9 @@ Profiling analysis looks at the different aspects of the resource and summarizes
 An annotation capturing digital resource fingerprint information.
 
 * *fingerprint* - A string value that represents the content of the digital resource.
-* *fingerprintAlgorithm* - The algorithm use to generate the fingerprint.
-* *hash* - An long value that represents the content of the digital resource.
-* *hashAlgorithm* - The algorithm use to generate the hash.
+* *fingerprintAlgorithm* - The algorithm used to generate the fingerprint.
+* *hash* - A long value that represents the content of the digital resource.
+* *hashAlgorithm* - The algorithm used to generate the hash.
 
 ## ResourceProfileAnnotation entity
 

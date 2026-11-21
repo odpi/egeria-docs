@@ -474,6 +474,7 @@ nav:
               - Area 2 Data Assets: types/2/index.md
               - Connectors and Connections: types/2/0201-Connectors-and-Connections.md
               - Connection Linkage: types/2/0205-Connection-Linkage.md
+              - Data Values: types/2/0208-Data-Values.md
               - Data Stores: types/2/0210-Data-Stores.md
               - Tabular Data Sets: types/2/0211-Tabular-Data-Sets.md
               - Deployed APIs: types/2/0212-Deployed-APIs.md
@@ -546,7 +547,7 @@ nav:
               - External Schema Types: types/5/0507-External-Schema-Type.md
               - Map Schema Elements: types/5/0511-Map-Schema-Elements.md
               - Derived Schema Elements: types/5/0512-Derived-Schema-Elements.md
-              - Process Variables: types/5/0525-Process-Variables.md
+              - Process Schemas: types/5/0520-Process-Schemas.md
               - Tabular Schemas: types/5/0530-Tabular-Schemas.md
               - Document Schemas: types/5/0531-Document-Schemas.md
               - Object Schemas: types/5/0532-Object-Schemas.md

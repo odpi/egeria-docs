@@ -79,6 +79,13 @@ A project that needs the results of another project to complete its work can be 
 * label - the label to use when displaying this relationship.
 * description - the description of the relationship between the projects.
 
+## ProjectTarget relationship
+
+The *ProjectTarget* relationship is used to identify an element that the project is to work on.
+
+* label - the label to use when displaying this relationship.
+* description - the description of the relationship between the project and its target.
+
 ## ProjectClassification classification
 
 The *ProjectClassification* classification is used to classify a project entity by approach (method) and how the intended results are to be used.  For example, the project may be experimental, using an agile development method.  The project classification can be used on any type of project entity.  It is for organizations that adjusts their governance processes and management of projects, iterations and tasks developing an idea as it moves from research, proof of concept, pilot and production/product.  It is expected that the values for the attributes in this classification are controlled using [valid metadata values](/guides/planning/valid-values/overview).

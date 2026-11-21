@@ -65,6 +65,7 @@ The operations fall into six groups.  The first three manage the infrastructure 
     These operations record how the deployed software was produced (see [0280 Software Development Assets](/types/2/0280-Software-Development-Assets) and [0282 Released Software Components](/types/2/0282-Released-Software-Components)):
 
     * *setElementAsGeneratedTarget* adds the [*GeneratedTarget*](/types/2/0280-Software-Development-Assets/#generatedtarget-classification) classification to an element produced by a build program or script, recording the build identifier, build tool and its version.  A generated target can be reproduced at will, so it does not need backing up.
+    * *setElementAsBranch* adds the [*Branch*](/types/2/0280-Software-Development-Assets/#branch-classification) classification to an element that holds the files for a specific branch of a source code repository, recording the branch's name, purpose, scope and the URL of the master copy of the branch in the repository.
     * *linkSoftwareSource* connects a software asset to the software component that it is built from with the [*SoftwareSource*](/types/2/0282-Released-Software-Components/#softwaresource-relationship) relationship.
     * *linkDependentSoftwareComponent* records that one [*RunnableSoftwareComponent*](/types/2/0282-Released-Software-Components/#runnablesoftwarecomponent-entity) needs another in order to execute with the [*DependentSoftwareComponent*](/types/2/0282-Released-Software-Components/#dependentsoftwarecomponent-relationship) relationship.
     * *setElementAsReusableTechnique* adds the [*ReusableTechnique*](/types/2/0280-Software-Development-Assets/#reusabletechnique-classification) classification to a process, script or technique that can be reused in multiple contexts, and *linkReusableTechniqueUse* records each place where it is used with the [*ReusableTechniqueUse*](/types/2/0280-Software-Development-Assets/#reusabletechniqueuse-relationship) relationship.
@@ -87,6 +88,8 @@ flowchart LR
         RSC2[RunnableSoftwareComponent]
         RT["Element<br/>&lt;&lt;ReusableTechnique&gt;&gt;"]
         TU[Element]
+        GT["Element<br/>&lt;&lt;GeneratedTarget&gt;&gt;"]
+        BR["Element<br/>&lt;&lt;Branch&gt;&gt;"]
     end
     subgraph infrastructure [Infrastructure]
         HC[HostCluster]

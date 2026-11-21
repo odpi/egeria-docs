@@ -16,6 +16,7 @@ The Project Manager API supports the following key features:
 * **Project Exploration**: Retrieve projects by name, classification, or search string. Explore project hierarchies and relationship graphs.
 * **Project Team Management**: Assign actors (people or teams) to projects with specific roles.
 * **Project Hierarchies and Dependencies**: Link projects together to represent work breakdowns or dependencies between different initiatives.
+* **Project Targets**: Identify the elements that a project is working on.
 * **Task Management**: Create and manage tasks linked to projects to identify discrete pieces of work.
 * **Project Classification**: Classify projects to indicate their approach and style (e.g., Campaign, Task, Study Project).
 
@@ -36,6 +37,7 @@ The Project Manager API supports:
 * The classification of projects that are either a campaign, task or a personal project.
 * The appointment of a project team and project manager to the project (if applicable).
 * The identification of resources such as digital products and assets that are needed to complete the project.
+* The identification of the elements that the project is working on, using the [*ProjectTarget*](/types/1/0130-Projects/#projecttarget-relationship) relationship (*setupProjectTarget* / *clearProjectTarget*).  The targets of a project are returned in *projectTargets* when the project is retrieved, and each target shows the projects working on it in *workedOnByProjects*.
 * The maintenance of project status, actions and meeting notes.
 
 

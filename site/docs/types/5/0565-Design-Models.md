@@ -24,9 +24,9 @@ There are specializations of *DesignModel* for describing different situations.
 
 The *DesignModelBoundary* entity describes a [Collection](/types/0/0021-Collections) of *DesignModelBoundary* and *DesignModelElement* entities. It is used to organize a design model into a hierarchical structure to simplify understanding. The nested *DesignModelBoundary* and *DesignModelElement* entities are linked to one or more *DesignModelBoundary* elements using the [CollectionMembership](/types/0/0021-Collections) relationship.
 
-There are specializations of *DesignModel* for describing different situations.
+There are specializations of *DesignModelBoundary* for describing different situations.
 
-* [SolutionBlueprintBoundary](/types/7/0740-Solution-Blueprints) described a collection of solution components that are located with a particular solution boundary.
+* [SolutionBoundary](/types/7/0740-Solution-Blueprints) describes a collection of solution components and roles that are located within a particular solution boundary.
 
 ## DesignModelElement entity
 

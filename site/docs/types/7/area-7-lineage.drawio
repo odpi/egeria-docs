@@ -1629,7 +1629,7 @@
         <mxCell id="YLU2RilW4DEBsKLLooS6-0" parent="iDyODMelmu4Kh6T8s1Pu-1" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" vertex="1">
           <mxGeometry height="50" width="170" x="50" y="340.5" as="geometry" />
         </mxCell>
-        <mxCell id="Dhc-90KzH0EEvtAhBiX9-0" parent="iDyODMelmu4Kh6T8s1Pu-1" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" value="«entity»&lt;br&gt;&lt;b&gt;DesignBoundaryModel&lt;/b&gt;" vertex="1">
+        <mxCell id="Dhc-90KzH0EEvtAhBiX9-0" parent="iDyODMelmu4Kh6T8s1Pu-1" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" value="«entity»&lt;br&gt;&lt;b&gt;DesignModelBoundary&lt;/b&gt;" vertex="1">
           <mxGeometry height="50" width="240" x="670" y="535" as="geometry" />
         </mxCell>
         <mxCell id="Dhc-90KzH0EEvtAhBiX9-1" edge="1" parent="iDyODMelmu4Kh6T8s1Pu-1" source="Dhc-90KzH0EEvtAhBiX9-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=block;endFill=0;endSize=18;strokeWidth=1;" target="Dhc-90KzH0EEvtAhBiX9-0">

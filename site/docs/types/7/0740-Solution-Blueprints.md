@@ -11,7 +11,12 @@ A [solution blueprint](/concepts/solution-blueprint) is a collection of [solutio
 ## SolutionBlueprint entity
 
 The *SolutionBlueprint* entity describes a single version of a solution's components and roles.  It inherits from [DesignModel](/types/5/0565-Design-Models) which is a type of [Collection](/types/0/0021-Collections).
-The [*CollectionMembership*](/types/0/0021-Collections) relationship identifies the list of elements (typically solution components and roles) that should appear on the diagram.  The [SolutionWire](/types/7/0735-Solution-Ports-and-Wires) relationships definition of the elements show how they are linked together, and so the CollectionMembership relationship simply documents the role each element plays in supporting the solution.
+The [*CollectionMembership*](/types/0/0021-Collections) relationship identifies the list of elements (typically solution components and roles) that should appear on the diagram.  The [SolutionLinkingWire](/types/7/0735-Solution-Ports-and-Wires) relationships show how they are linked together, and so the CollectionMembership relationship simply documents the role each element plays in supporting the solution.
+
+## SolutionBoundary entity
+
+The *SolutionBoundary* entity is used to organize solution blueprint's components and roles in a hierarchy to help understanding.  It inherits from [DesignModelBoundary](/types/5/0565-Design-Models) which is a type of [Collection](/types/0/0021-Collections).
+The [*CollectionMembership*](/types/0/0021-Collections) relationship identifies the list of elements (typically solution components and roles) that should appear within the boundary on the blueprint's mermaid diagram using the CollectionMembership relationship.
 
 ## SolutionDesign relationship
 

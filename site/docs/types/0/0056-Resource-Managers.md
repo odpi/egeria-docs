@@ -16,7 +16,9 @@ The `FileSystem` is a collection of stored files organized in a folder hierarchy
 * *localMountPoint* - root of the file path name that is due to the resource manager's view of the file system.
 * *canonicalMountPoint* - value to replace the actual mount point with when storing/retrieving metadata about a file within the file system.
 
-The use of the localMountPoint and canonicalMountPoint is critical to allow different tools in the open metadata ecosystem to share metadata about the same files.
+The use of the localMountPoint and canonicalMountPoint is critical to allow different tools in the open metadata ecosystem to share metadata about the same files.  The mount points apply to a folder, and the folders and files beneath it, when the `FileSystem` is linked to the folder's [FileFolder](/types/2/0220-Files-and-Folders/#filefolder) asset using the [CapabilityAssetUse](/types/0/0045-Servers-and-Assets/#capabilityassetuse-relationship) relationship.
+
+See [File System Normalization](/features/file-system-normalization/overview) for a description of how the mount points are used to give each directory and file a single canonical path name, and how to set them up in your catalog.
 
 ## FileManager
 

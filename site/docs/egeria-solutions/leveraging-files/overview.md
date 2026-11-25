@@ -98,7 +98,7 @@ This reference data isn't just for browsing - it is applied automatically wherev
 
 ## File Surveys
 
-The file survey connectors contain the implementation of three [survey action services](/concepts/survey-action-service) that extract and report on files and folders.  The connectors are provided by the Egeria community.
+The file survey connectors contain the implementation of four [survey action services](/concepts/survey-action-service) that extract and report on files and folders.  The connectors are provided by the Egeria community.
 
 * **Folder Survey Service** - analyses the files nested in a folder.  The depth of the survey is controlled by the `analysisLevel` request parameter:
 
@@ -110,6 +110,58 @@ The file survey connectors contain the implementation of three [survey action se
 * **File Survey Service** - extracts properties about a single file and classifies it using Egeria's file reference data, as described above.
 
 * **CSV Survey Service** - analyses the internals of a CSV file to determine the schema (column structure) and to profile the data in each column.
+
+* **Parquet Survey Service** - analyses the footer of an Apache Parquet file to determine the schema and to profile the data in each column.  See [Working with Apache Parquet files](#working-with-apache-parquet-files).
+
+
+## Working with Apache Parquet files
+
+[Apache Parquet](https://parquet.apache.org/) is a column-oriented file format that is widely used to store data for analytics.  A Parquet file describes itself: it ends with a *footer* where the software that wrote the file records the schema of the data, how the rows are divided into *row groups*, how the values are compressed and encoded, and statistics about the values in each column.
+
+Egeria uses the footer to describe a Parquet file without reading the data in it.  This means that:
+
+* describing a file takes the same time whatever its size;
+* the description is available for files written to any version of the Parquet format, using any encoding and any compression algorithm; and
+* no Parquet, Hadoop or compression libraries are needed.
+
+### Cataloguing Parquet files
+
+A file with a file extension of `.parquet` is recognized by the file reference data as a *Parquet File*.  The connectors that catalogue files create a [*ParquetFile*](/types/2/0220-Files-and-Folders/#parquetfile-entity) asset for it, with a deployed implementation type of *Parquet Data File*.  The asset is created from the *Parquet Data File* template in the [Core Content Pack](/content-packs/core-content-pack/overview), which gives it a connection to the Parquet File Store connector.
+
+### Surveying Parquet files
+
+The `survey-parquet-file` survey is the survey listed for the *Parquet Data File* technology type.  It has four analysis steps, and the `finalAnalysisStep` request parameter can be used to stop the survey early.
+
+| Analysis step | Annotation | What is recorded |
+|:--------------|:-----------|:-----------------|
+| Check Asset | | Checks that the asset is a *ParquetFile* with a connection to the Parquet File Store connector. |
+| Measure Resource | *Extract File Properties* | The properties of the file that are visible through the file system.  This is the annotation that the File Survey Service produces. |
+| Measure Resource | *Extract Parquet File Properties* | The number of rows, row groups and columns; the compressed and uncompressed size of the data; the software that wrote the file; and the features of the Parquet format that the file uses.  These show what a reader needs to support in order to read the file. |
+| Schema Extraction | *Extract Schema From Footer* | The number of columns and their names.  A *TabularColumn* is attached to the asset's schema type for each top-level column, with its name, position, data type and whether it is nullable.  If the asset already has a schema, matching columns are updated, new columns are added, and columns that are no longer in the file are archived. |
+| Profile Data | *Profile Column From Statistics* | For each column that holds values: the smallest and largest values; the number of values, nulls and distinct values; its compressed and uncompressed size; and how the values are stored. |
+
+The last step also counts how many times each value occurs in a top-level column, provided the column has no more than 100 different values.  This is intended for columns that hold codes or categories.  It is the only part of the survey that reads the data in the file.
+
+!!! info "What to expect from the column profiles"
+    * The smallest, largest and distinct values come from the statistics that the writer of the file chose to save.  They are left out if the writer did not save them, or saved them in a form that is known to be unreliable.
+    * A column that contains nested data (an array, map or structure) is catalogued as one column, with a data type that describes its structure.  It has a profile for each of the nested columns that hold values.
+    * Counting the values needs the DuckDB JDBC driver, which is included in the OMAG Server Platform.  Without it, the survey completes without the counts and logs message `SURVEY-ACTION-SERVICE-0007`.
+    * Columns that are encrypted are identified, and have no statistics.  A file with an encrypted footer can not be described.
+
+### Reading the data in Parquet files
+
+The Parquet connectors read the rows in a file through the [DuckDB](https://duckdb.org/) JDBC driver, which has a complete implementation of the Parquet format.  The driver is included in the OMAG Server Platform.  In a runtime without the driver, the connectors still describe the file, but a request to read a row fails with the `PARQUET-FILE-CONNECTOR-400-005` exception.  The connectors do not write to Parquet files.
+
+A Parquet file can also be catalogued as a [tabular data set](/concepts/tabular-data-set) rather than as a file.  This is for consumers that are interested in the table of data, and not in how it is stored.  The Core Content Pack has a template for each of these deployed implementation types:
+
+* *Parquet Tabular Data Set* - a single Parquet file.  The `directoryPathName` and `tableName` configuration properties identify the file, which is called `<tableName>.parquet`.  The optional `tableDescription` configuration property describes the table.
+* *Parquet Tabular Data Set Collection* - a directory of Parquet files, identified by the `directoryPathName` configuration property.  Each file in the directory is a table, named after the file.
+
+These are the same configuration properties as are used by the equivalent connectors for CSV files.
+
+### Parquet files in data sharing hubs
+
+The [Liskov Data Sharing Hub Manager](/patterns/harvest-and-publish/overview/#the-liskov-data-sharing-hub-manager) keeps Parquet files catalogued and surveyed, and adds their columns to the data dictionary of a [data sharing hub](/concepts/data-sharing-hub).  This applies to a Parquet file that is a member of the hub, and to the Parquet files catalogued from a directory that is a member.  The files in a directory are matched to it using their path names - see [File System Normalization](/features/file-system-normalization/overview).
 
 
 ## Connectors for working with Files
@@ -136,9 +188,17 @@ Files provide storage for many types of data.  They are organized into folders (
 
 * The [CSV File Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/csv-file-connector/README.md){ target=gh } is able to retrieve data from a Comma Separated Values (CSV) file where the contents are stored in logical columns with a special character delimiter between the columns.
 
+### Parquet Files
+
+* The [Parquet File Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/parquet-file-connector/README.md){ target=gh } describes the contents of an Apache Parquet file from its footer, and reads the rows of data in it.
+* The [Parquet Tabular Data Set Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/parquet-file-connector/README.md#parquet-tabular-data-set-connector){ target=gh } reads a Parquet file that is catalogued as a tabular data set.
+* The [Parquet Tabular Data Set Collection Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/parquet-file-connector/README.md#parquet-tabular-data-set-collection-connector){ target=gh } reads a directory of Parquet files as a collection of tabular data sets.
+* The [Parquet File Survey Service :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/file-survey-connectors/README.md#parquet-file-survey-service){ target=gh } catalogues the columns in a Parquet file and profiles the data in them.
+
 
 ## Related information
 
+* [File System Normalization](/features/file-system-normalization/overview) - how directories and files are catalogued under a canonical path name.
 * [File Type](/concepts/file-type) - the full list of file names and extensions recognized by Egeria's reference data.
 * [Deployed Implementation Type](/concepts/deployed-implementation-type) - the broader technology categories that file types map to.
 * [Open Survey Framework](/frameworks/osf/overview) - background on survey reports and annotations generally.

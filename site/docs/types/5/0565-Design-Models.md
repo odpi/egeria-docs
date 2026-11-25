@@ -13,15 +13,20 @@ Model 0565 shows the definition of a generic design model and a design model ele
 
 ## DesignModel entity
 
-The *DesignModel* entity describes a [Collection](/types/0/0021-Collections) of *DesignModelElement* entities.  The *DesignModelElement* entities are linked to one or more *DesignModel* elements using the [CollectionMembership](/types/0/0021-Collections) relationship.
-
-* *authors* allow one or more authors of the model to be acknowledged.
-* *userDefinedStatus* is used to define your own statuses for your model elements.
+The *DesignModel* entity describes a [Collection](/types/0/0021-Collections) of *DesignModelBoundary* and *DesignModelElement* entities.  The nested *DesignModelBoundary* and *DesignModelElement* entities are linked to one or more *DesignModel* elements using the [CollectionMembership](/types/0/0021-Collections) relationship.
 
 There are specializations of *DesignModel* for describing different situations.
 
 * [ConceptModel](/types/5/0571-Concept-Models) described a collection of modelled concepts.
 * [SolutionBlueprint](/types/7/0740-Solution-Blueprints) described a collection of components that make up a solution.
+
+## DesignModelBoundary entity
+
+The *DesignModelBoundary* entity describes a [Collection](/types/0/0021-Collections) of *DesignModelBoundary* and *DesignModelElement* entities. It is used to organize a design model into a hierarchical structure to simplify understanding. The nested *DesignModelBoundary* and *DesignModelElement* entities are linked to one or more *DesignModelBoundary* elements using the [CollectionMembership](/types/0/0021-Collections) relationship.
+
+There are specializations of *DesignModel* for describing different situations.
+
+* [SolutionBlueprintBoundary](/types/7/0740-Solution-Blueprints) described a collection of solution components that are located with a particular solution boundary.
 
 ## DesignModelElement entity
 

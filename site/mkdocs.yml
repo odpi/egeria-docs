@@ -404,6 +404,7 @@ nav:
         - Duplicate Management: features/duplicate-management/overview.md
         - Effectivity Dates: features/effectivity-dates/overview.md
         - External Identifiers: features/external-identifiers/overview.md
+        - File System Normalization: features/file-system-normalization/overview.md
         - Governance Zoning: features/governance-zoning/overview.md
         - Incident Reporting: features/incident-reporting/overview.md
         - Integrated Cataloguing: features/integrated-cataloguing/overview.md
@@ -434,6 +435,7 @@ nav:
               - Linked Media: types/0/0015-Linked-Media-Types.md
               - Cited Documents: types/0/0016-Cited-Documents.md
               - External Identifiers: types/0/0017-External-Identifiers.md
+              - Decisions: types/0/0018-Decisions.md
               - More Information: types/0/0019-More-Information.md
               - Property Facets: types/0/0020-Property-Facets.md
               - Collections: types/0/0021-Collections.md

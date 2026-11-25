@@ -395,11 +395,16 @@ The `DISCOVERED`, `PROPOSED` and `IMPORTED` statuses all mean that nobody has ru
 * that type is a `Referenceable`, since only a `Referenceable` has a qualified name; and
 * the two qualified names are the same.
 
-This is the same reasoning that detection uses, and it is deliberately the only rule Mendel applies without asking.  Any other combination - different types at the two ends, or a match on some other property - is a judgement call that belongs to a steward.
+This is the same reasoning that detection uses.  Mendel applies one other rule without asking, which is for files and folders.  It confirms the duplicate when:
+
+* the entities at the two ends are both a `DataFile`, or both a `FileFolder` - a subtype counts, so a `CSVFile` can match a `DataFile`; and
+* the two `pathName` properties are the same.
+
+A directory or file that is catalogued twice under the same [canonical path name](/features/file-system-normalization/overview) is the same digital resource, whatever qualified names the two elements were given.  Any other combination - different types at the two ends, a file paired with a folder, or a match on some other property - is a judgement call that belongs to a steward.
 
 Where the entities are a close match, the `statusIdentifier` of the link is moved to `VALIDATED` and the `KnownDuplicate` classification is added to each entity that does not already carry it.  Both are needed before the retrieval processing combines anything.  The outcome is recorded as `MENDEL-DUPLICATE-MANAGER-0004`.
 
-The status is what the retrieval processing acts on; the rest of what is written to the link is for whoever reads it afterwards.  The `steward` property holds Mendel's own userId, with `stewardTypeName` of `UserIdentity` and `stewardPropertyName` of `userId`; `source` names the connector; and `notes` records the grounds - the three tests above, and the fact that a pairing failing any of them is referred to a steward instead.  A steward looking at a pair of combined entities can therefore see that the decision was the connector's rather than a person's, and on what basis.  That distinction is what the [next pass](#pass-two---the-decisions-mendel-can-take-back) turns on.
+The status is what the retrieval processing acts on; the rest of what is written to the link is for whoever reads it afterwards.  The `steward` property holds Mendel's own userId, with `stewardTypeName` of `UserIdentity` and `stewardPropertyName` of `userId`; `source` names the connector; and `notes` records the grounds - which of the two rules above was met, and the fact that a pairing failing any of them is referred to a steward instead.  A steward looking at a pair of combined entities can therefore see that the decision was the connector's rather than a person's, and on what basis.  That distinction is what the [next pass](#pass-two---the-decisions-mendel-can-take-back) turns on.
 
 Where the entities are not a close match, a [`ToDo`](/concepts/to-do) is created for a steward and recorded as `MENDEL-DUPLICATE-MANAGER-0005`.  The to do describes the decision to be made, and carries both entities as action targets named `duplicateElement` so that the steward can work on them directly.  It is assigned to the `DuplicateMetadataSteward` [person role](/types/1/0118-Actor-Roles), which Mendel creates the first time it needs it - recorded as `MENDEL-DUPLICATE-MANAGER-0003`.
 
@@ -412,9 +417,9 @@ The steward's side of the decision is the same either way: confirming the duplic
 
 #### Pass two - the decisions Mendel can take back
 
-A close match can stop being one.  The usual way is that somebody corrects a qualified name - which is exactly what a pair that only ever shared a name by mistake looks like once the mistake is fixed.  Nothing else revisits a validated link, so without this pass the two entities would go on being combined for ever on the strength of a match that no longer exists.
+A close match can stop being one.  The usual way is that somebody corrects a qualified name or a path name - which is exactly what a pair that only ever shared a name by mistake looks like once the mistake is fixed.  Nothing else revisits a validated link, so without this pass the two entities would go on being combined for ever on the strength of a match that no longer exists.
 
-Mendel therefore re-tests the close match rule on every validated link, and where the grounds have gone it withdraws its decision:
+Mendel therefore re-tests both rules on every validated link, and where the grounds have gone it withdraws its decision:
 
 * The link is moved to `DEPRECATED` rather than deleted, so the decision stays visible and reversible.  Its `notes` are replaced with an explanation of what was withdrawn and why, including the fact that a steward who believes the entities really are duplicates can validate the link again.
 * The `KnownDuplicate` classifications are not touched here.  [Pass three](#pass-three---the-entities-that-are-no-longer-combined) takes them off once the entity is no longer deduplicated by any route, which is the same rule that applies when a steward retires a link.

@@ -27,6 +27,7 @@ The Egeria features describe the value-add features that Egeria adds to its abil
 - [Synchronized Access Control](/features/synchronized-access-control/overview) - how to use metadata to maintain security information used to secure access to [digital resources](/concepts/digital-resource).
 - [Templated Cataloguing](/features/templated-cataloguing/overview) - using existing metadata elements as templates when cataloguing new [digital resources](/concepts/digital-resource).
 - [User Feedback](/features/user-feedback/overview) - opening up the communication between [digital resource](/concepts/digital-resource) owners and resource consumers.
+- [Versioning](/features/versioning/overview) - using the automatic versioning of metadata elements by the repositories to query the past, and modelling the versions of a [digital resource](/concepts/digital-resource) explicitly when more than one is active at once.
 
 
 --8<-- "snippets/abbr.md"

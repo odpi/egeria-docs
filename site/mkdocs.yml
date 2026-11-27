@@ -419,6 +419,7 @@ nav:
         - Synchronized Access Control: features/synchronized-access-control/overview.md
         - Templated Cataloguing: features/templated-cataloguing/overview.md
         - User Feedback: features/user-feedback/overview.md
+        - Versioning: features/versioning/overview.md
   - Reference:
       - Reference: reference/index.md
       - Categories of Metadata: patterns/metadata-manager/categories-of-metadata.md

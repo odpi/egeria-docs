@@ -15,6 +15,7 @@ The service supports a wide range of operations across the metadata lifecycle:
 
 - **Metadata Element Management**: Full lifecycle support for open metadata elements, including creation (directly or from templates), updates, effectivity date management, archiving, and deletion. It also supports publishing and withdrawing elements.
 - **Classification Management**: Capability to classify metadata elements, update classification properties and effectivity dates, and declassify elements.
+- **Undo and Restore**: Reversing changes - [undoing](#undoing-updates-and-restoring-deleted-elements) the last update to an element or relationship, and restoring elements and relationships that have been soft-deleted or archived.
 - **Relationship Management**: Tools for creating and maintaining relationships between metadata elements, including updating relationship properties and detaching elements.
 - **Advanced Search and Discovery**:
     - **Search**: Finding elements using search strings, regular expressions, or complex property-based queries.
@@ -61,6 +62,57 @@ The final two operations allow you to retrieve details of a specific relationshi
 
 * getRelationshipByGUID - Retrieve the relationship using its unique identifier.
 * getRelationshipHistory - Retrieve all the versions of a relationship.
+
+## Undoing updates and restoring deleted elements
+
+The Metadata Expert API has four operations that reverse an earlier change.  They rely on the history that the open metadata repository keeps for each element and relationship (see [Versioning](/features/versioning/overview)).
+
+| Operation | URL (after `/servers/{serverName}/api/open-metadata/{urlMarker}`) | Reverses |
+|:--|:--|:--|
+| `undoMetadataElementUpdate` | `/metadata-elements/{metadataElementGUID}/undo` | The last update to an element. |
+| `undoRelationshipUpdate` | `/related-elements/{relationshipGUID}/undo` | The last update to a relationship. |
+| `restoreMetadataElementInStore` | `/metadata-elements/{metadataElementGUID}/restore` | The soft delete or archive that removed an element. |
+| `restoreRelationshipInStore` | `/related-elements/{relationshipGUID}/restore` | The soft delete of a relationship. |
+
+Each is a `POST` request with an optional `MetadataSourceRequestBody`.  This carries the `externalSourceGUID` and `externalSourceName` that identify the owner of the element if it comes from an [external metadata source](/features/metadata-provenance/overview), along with the `effectiveTime`, `forLineage` and `forDuplicateProcessing` options.
+
+```
+###
+# @name undoMetadataElementUpdate
+POST {{baseURL}}/servers/{{viewServer}}/api/open-metadata/metadata-expert/metadata-elements/{{metadataElementGUID}}/undo
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "class": "MetadataSourceRequestBody"
+}
+```
+
+### Undo
+
+An undo puts back the previous version of an element or relationship.
+
+* An update is made to a single element, and so is its undo.  Nothing that is [anchored](/features/anchor-management/overview) to the element is changed.
+* The previous version's content is stored as a *new* version, so the version number goes up rather than down and the update that was undone remains in the element's history.
+* Because undo always returns to the version before the current one, a second undo reverses the first, reinstating the update.  It does not step back a further version.
+* If the element has no previous version, there is nothing to undo and the request fails with an invalid parameter exception.
+
+### Restore
+
+A restore reverses the command that removed an element, whether that was a soft delete or an [archive](/concepts/memento), and reverses all of it.
+
+* Every instance changed by a single delete or archive command carries the same *lastOperationId* in its header.  The restore uses this to locate everything that the command changed, and so it can be requested on any of the elements that the command removed.
+* Restoring an element that was deleted with a cascaded delete brings back the elements that were anchored to it, and the relationships that the delete removed - including those to elements outside its anchored graph, provided those elements are still active.
+* An element that was removed by a separate, earlier command stays deleted.
+* Restoring after an archive removes the *Memento* classifications and takes the `_archivedOn_` suffix off the qualified names.
+* `restoreRelationshipInStore` restores a soft-deleted relationship on its own.  Both of its ends must be active.
+* A restored element or relationship returns in the state it had before it was removed, as a new version.
+* A purged element can not be restored.  Elements deleted before the upgrade to release 6.3 have no *lastOperationId* and are restored one at a time.
+
+There is more information on the different types of delete in the [developer guide](/guides/developer/maintaining-metadata/overview#deleting-metadata).
+
+!!! attention "Undo and restore do not rewrite history"
+    Neither operation removes versions from the repository.  The reversal is recorded as a further version of the element, and the versions it reverses can still be retrieved with the history operations and `asOfTime` queries.
 
 
 

@@ -1,0 +1,511 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" pages="2">
+  <diagram name="catalog-templates" id="TDWtUl6oVAiIhDJUpcDL">
+    <mxGraphModel dx="1211" dy="821" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NejPG11raU5e0VWc-tfL-7" edge="1" parent="1" source="780snM6feV9xTrxozphn-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="780snM6feV9xTrxozphn-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="qualifiedName=&lt;div&gt;PostgreSQLServer:&lt;br&gt;{{serverName}}&lt;br&gt;&lt;br&gt;deployedImplementationType =&quot;PostgreSQL DatabaseServer&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="190" x="310" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" value="SoftwareServer" vertex="1">
+          <mxGeometry height="30" width="80" x="310" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-9" edge="1" parent="1" source="780snM6feV9xTrxozphn-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="780snM6feV9xTrxozphn-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NejPG11raU5e0VWc-tfL-8" edge="1" parent="1" source="780snM6feV9xTrxozphn-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="780snM6feV9xTrxozphn-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;{{serverName}}&lt;br&gt;:Connection&lt;br&gt;&lt;br&gt;userId={{databaseUserId}}&lt;br&gt;clearPassword={{databasePassword}}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="160" x="630" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Connection" vertex="1">
+          <mxGeometry height="30" width="70" x="630" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-6" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="AssetConnection" vertex="1">
+          <mxGeometry height="30" width="110" x="510" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="JDBC Resource&lt;br&gt;ConnectorType" vertex="1">
+          <mxGeometry height="60" width="120" x="850" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ConnectorType" vertex="1">
+          <mxGeometry height="30" width="80" x="850" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=PostgreSQL Server:{{serverName}}:Endpoint&lt;br&gt;&lt;br&gt;name={{serverName}} endpoint&lt;br&gt;&lt;br&gt;address=jdbc:postgresql://{{hostIdentifier}}:{{portNumber}}/postgres" vertex="1">
+          <mxGeometry height="100" width="420" x="990" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Endpoint" vertex="1">
+          <mxGeometry height="30" width="80" x="990" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-13" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectionConnectorType" vertex="1">
+          <mxGeometry height="30" width="170" x="760" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-14" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectToEndpoint" vertex="1">
+          <mxGeometry height="30" width="130" x="840" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-16" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" value="PostgreSQL Server Template" vertex="1">
+          <mxGeometry height="30" width="190" x="45" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="t5AhHzGSxBg5bSRpzmGk-24" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" value="PostgreSQL Database Template" vertex="1">
+          <mxGeometry height="30" width="200" x="45" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-1" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" value="PostgreSQL Database Schema Template" vertex="1">
+          <mxGeometry height="30" width="250" x="40" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-2" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" value="PostgreSQL Database Table Template" vertex="1">
+          <mxGeometry height="30" width="240" x="40" y="1154" as="geometry" />
+        </mxCell>
+        <mxCell id="NejPG11raU5e0VWc-tfL-6" edge="1" parent="1" source="mHtF1pgwz7ZxQ6UxLGhy-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="mHtF1pgwz7ZxQ6UxLGhy-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="qualifiedName=&lt;div&gt;PostgreSQLDatabase:&lt;br&gt;{{serverName}}:&lt;br&gt;{{databaseName}}&lt;br&gt;&lt;br&gt;deployedImplementationType =&quot;PostgreSQL Database&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="190" x="310" y="582" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" value="Database" vertex="1">
+          <mxGeometry height="30" width="80" x="310" y="552" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-5" edge="1" parent="1" source="mHtF1pgwz7ZxQ6UxLGhy-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="mHtF1pgwz7ZxQ6UxLGhy-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NejPG11raU5e0VWc-tfL-5" edge="1" parent="1" source="mHtF1pgwz7ZxQ6UxLGhy-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="mHtF1pgwz7ZxQ6UxLGhy-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQLDatabase:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;{{serverName}}:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;{{databaseName}}&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;:Connection&lt;br&gt;&lt;br&gt;userId={{databaseUserId}}&lt;br&gt;clearPassword={{databasePassword}}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="240" x="630" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Connection" vertex="1">
+          <mxGeometry height="30" width="70" x="630" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-10" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="AssetConnection" vertex="1">
+          <mxGeometry height="30" width="110" x="510" y="602" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="JDBC Resource&lt;br&gt;ConnectorType" vertex="1">
+          <mxGeometry height="60" width="120" x="940" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ConnectorType" vertex="1">
+          <mxGeometry height="30" width="80" x="940" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQLDatabase:{{serverName}}:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;{{databaseName}}:Endpoint&lt;br&gt;&lt;br&gt;name={{databaseName}} endpoint&lt;br&gt;&lt;br&gt;address=jdbc:postgresql://{{hostIdentfier}}:{{portNumber}}/{{databaseName}}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="125" width="400" x="1080" y="572.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Endpoint" vertex="1">
+          <mxGeometry height="30" width="80" x="1080" y="542.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-15" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectionConnectorType" vertex="1">
+          <mxGeometry height="30" width="170" x="770" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-16" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectToEndpoint" vertex="1">
+          <mxGeometry height="30" width="130" x="930" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-1" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="hostIdentifier&lt;br&gt;portNumber&lt;br&gt;serverName&lt;br&gt;databaseUserId &lt;br&gt;databasePassword" vertex="1">
+          <mxGeometry height="90" width="130" x="70" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-2" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="hostIdentifier&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;portNumber&lt;br&gt;serverName&lt;br&gt;databaseName&lt;br&gt;databaseUserId&lt;br&gt;databasePassword&lt;br&gt;" vertex="1">
+          <mxGeometry height="100" width="130" x="70" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-3" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="hostIdentifier&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;portNumber&lt;br&gt;serverName&lt;br&gt;databaseName&lt;br&gt;schemaName&lt;br&gt;databaseUserId&lt;br&gt;databasePassword" vertex="1">
+          <mxGeometry height="110" width="130" x="70" y="915" as="geometry" />
+        </mxCell>
+        <mxCell id="NejPG11raU5e0VWc-tfL-2" edge="1" parent="1" source="MOPJvNTGCrpKyyy_cZIb-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="MOPJvNTGCrpKyyy_cZIb-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="qualifiedName=&lt;div&gt;PostgreSQLDatabase:&lt;br&gt;{{serverName}}:&lt;br&gt;{{databaseName}}:{{schemaName}}&lt;br&gt;&lt;br&gt;deployedImplementationType =&quot;PostgreSQL Database&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="230" x="310" y="947" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" value="DeployedDatabaseSchema" vertex="1">
+          <mxGeometry height="30" width="150" x="310" y="917" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-6" edge="1" parent="1" source="MOPJvNTGCrpKyyy_cZIb-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="MOPJvNTGCrpKyyy_cZIb-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NejPG11raU5e0VWc-tfL-4" edge="1" parent="1" source="MOPJvNTGCrpKyyy_cZIb-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="MOPJvNTGCrpKyyy_cZIb-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQLDatabase:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;{{serverName}}:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;{{databaseName}}:{{schemaName}}&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;:Connection&lt;br&gt;&lt;br&gt;userId={{databaseUserId}}&lt;br&gt;clearPassword={{databasePassword}}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="240" x="670" y="935" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Connection" vertex="1">
+          <mxGeometry height="30" width="70" x="670" y="905" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-11" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="AssetConnection" vertex="1">
+          <mxGeometry height="30" width="110" x="550" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="JDBC Resource&lt;br&gt;ConnectorType" vertex="1">
+          <mxGeometry height="60" width="120" x="980" y="1055" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ConnectorType" vertex="1">
+          <mxGeometry height="30" width="80" x="980" y="1025" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQLDatabase:{{serverName}}:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;{{databaseName}}:{{schemaName}}:Endpoint&lt;br&gt;&lt;br&gt;name={{databaseName}}.{{schemaName}}&lt;br&gt;&lt;br&gt;address=jdbc:postgresql://{{hostIdentfier}}:{{portNumber}}/{{databaseName}}?currentSchema={{schemaName}}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="410" x="1120" y="935" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Endpoint" vertex="1">
+          <mxGeometry height="30" width="80" x="1120" y="905" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-16" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectionConnectorType" vertex="1">
+          <mxGeometry height="30" width="170" x="810" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-17" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectToEndpoint" vertex="1">
+          <mxGeometry height="30" width="130" x="970" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="NejPG11raU5e0VWc-tfL-1" edge="1" parent="1" source="MOPJvNTGCrpKyyy_cZIb-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="MOPJvNTGCrpKyyy_cZIb-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="qualifiedName=&lt;div&gt;PostgreSQLDatabase:&lt;br&gt;{{serverName}}:&lt;br&gt;{{databaseName}}:{{schemaName}}:&lt;br&gt;{{tableName}}&lt;br&gt;&lt;br&gt;name={{tableName}}&lt;br&gt;&lt;br&gt;deployedImplementationType =&quot;PostgreSQL Table&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="154" width="230" x="310" y="1226" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" value="TableDataSet" vertex="1">
+          <mxGeometry height="30" width="150" x="310" y="1196" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-33" edge="1" parent="1" source="MOPJvNTGCrpKyyy_cZIb-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="MOPJvNTGCrpKyyy_cZIb-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NejPG11raU5e0VWc-tfL-3" edge="1" parent="1" source="MOPJvNTGCrpKyyy_cZIb-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="MOPJvNTGCrpKyyy_cZIb-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQLDatabase:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;{{serverName}}:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;{{databaseName}}:{{schemaName}}&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;{{talbeName}}:Connection&lt;br&gt;&lt;br&gt;userId={{databaseUserId}}&lt;br&gt;clearPassword={{databasePassword}}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="240" x="670" y="1238" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-37" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Connection" vertex="1">
+          <mxGeometry height="30" width="70" x="670" y="1208" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-38" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="AssetConnection" vertex="1">
+          <mxGeometry height="30" width="110" x="550" y="1252" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-39" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="JDBC Table&lt;br&gt;ConnectorType" vertex="1">
+          <mxGeometry height="60" width="120" x="980" y="1358" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-40" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ConnectorType" vertex="1">
+          <mxGeometry height="30" width="80" x="980" y="1328" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-41" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQLDatabase:{{serverName}}:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;{{databaseName}}:{{schemaName}}{{tableName}}:Endpoint&lt;br&gt;&lt;br&gt;name={{databaseName}}.{{schemaName}}.{{tableName}}&lt;br&gt;&lt;br&gt;address=jdbc:postgresql://{{hostIdentfier}}:{{portNumber}}/{{databaseName}}?currentSchema={{schemaName}}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="131" width="410" x="1120" y="1237" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-42" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Endpoint" vertex="1">
+          <mxGeometry height="30" width="80" x="1120" y="1207" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-43" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectionConnectorType" vertex="1">
+          <mxGeometry height="30" width="170" x="810" y="1404" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-44" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectToEndpoint" vertex="1">
+          <mxGeometry height="30" width="130" x="970" y="1273" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-45" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="serverName&lt;br&gt;databaseName&lt;br&gt;schemaName&lt;br&gt;tableName&lt;br&gt;databaseUserId&lt;br&gt;databasePassword" vertex="1">
+          <mxGeometry height="100" width="130" x="70" y="1214" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-46" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="19" y="790" as="sourcePoint" />
+            <mxPoint x="1320" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arFYRd3ZnFPtYKxmsfah-7" edge="1" parent="1" source="780snM6feV9xTrxozphn-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="arFYRd3ZnFPtYKxmsfah-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="-70" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arFYRd3ZnFPtYKxmsfah-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;{{hostIdentifier}}:{{portNumber}}:DBMS&lt;br&gt;&lt;br&gt;deployedImplementationType=&lt;/div&gt;&lt;div&gt;PostgreSQL Database Server&lt;/div&gt;" vertex="1">
+          <mxGeometry height="117" width="275" x="465" y="343" as="geometry" />
+        </mxCell>
+        <mxCell id="arFYRd3ZnFPtYKxmsfah-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" value="DatabaseManager" vertex="1">
+          <mxGeometry height="30" width="110" x="465" y="313" as="geometry" />
+        </mxCell>
+        <mxCell id="arFYRd3ZnFPtYKxmsfah-10" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="SupportedSoftwareCapability" vertex="1">
+          <mxGeometry height="30" width="180" x="380" y="233" as="geometry" />
+        </mxCell>
+        <mxCell id="arFYRd3ZnFPtYKxmsfah-11" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="operationalStatus=ENABLED(1)" vertex="1">
+          <mxGeometry height="30" width="190" x="385" y="263" as="geometry" />
+        </mxCell>
+        <mxCell id="fC3owj5m2THAvyfhFMzX-1" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="PlaceholderProperties" vertex="1">
+          <mxGeometry height="30" width="140" x="35" y="113" as="geometry" />
+        </mxCell>
+        <mxCell id="rooNoN4UTwo-En43ZT1o-1" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="PlaceholderProperties" vertex="1">
+          <mxGeometry height="30" width="140" x="35" y="1184" as="geometry" />
+        </mxCell>
+        <mxCell id="rooNoN4UTwo-En43ZT1o-2" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="PlaceholderProperties" vertex="1">
+          <mxGeometry height="30" width="140" x="35" y="887" as="geometry" />
+        </mxCell>
+        <mxCell id="rooNoN4UTwo-En43ZT1o-3" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="PlaceholderProperties" vertex="1">
+          <mxGeometry height="30" width="140" x="35" y="540" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="example" id="12OH-WMt4xq--agAHbQu">
+    <mxGraphModel dx="1211" dy="821" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-0" />
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-1" parent="Ikl7Su4nN-SMVtI7CH5I-0" />
+        <mxCell id="A1VhUj8QFhEmw2Ag1Bnf-0" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-2" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;{{serverName}}&lt;br&gt;&lt;br&gt;deployedImplementationType =&quot;PostgreSQL DatabaseServer&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="190" x="310" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-3" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" value="SoftwareServer" vertex="1">
+          <mxGeometry height="30" width="80" x="310" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-4" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A1VhUj8QFhEmw2Ag1Bnf-1" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-7" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;{{serverName}}&lt;br&gt;:Connection&lt;br&gt;&lt;br&gt;userId={{adminUserId}}&lt;br&gt;clearPassword={{adminPassword}}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="160" x="630" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-8" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Connection" vertex="1">
+          <mxGeometry height="30" width="70" x="630" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-9" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="AssetConnection" vertex="1">
+          <mxGeometry height="30" width="110" x="510" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-10" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="JDBC REST&lt;br&gt;ConnectorType" vertex="1">
+          <mxGeometry height="60" width="120" x="850" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-11" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ConnectorType" vertex="1">
+          <mxGeometry height="30" width="80" x="850" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-12" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:{{serverName}}:Endpoint&lt;br&gt;&lt;br&gt;address={{connectionString}}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="200" x="990" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-13" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Endpoint" vertex="1">
+          <mxGeometry height="30" width="80" x="990" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-14" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectionConnectorType" vertex="1">
+          <mxGeometry height="30" width="170" x="760" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-15" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectToEndpoint" vertex="1">
+          <mxGeometry height="30" width="130" x="840" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-16" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" value="PostgreSQL Server Template" vertex="1">
+          <mxGeometry height="30" width="190" x="45" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="5IpWu-6N1tLHI4XAG99y-0" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="D-8dfM7yrUYoK77np7sW-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-17" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="PostgreSQL Server:&lt;br&gt;coconet.com:5432:SurveyReport:&amp;lt;timestamp&amp;gt;" vertex="1">
+          <mxGeometry height="80" width="190" x="480" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-18" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;" value="SurveyReport" vertex="1">
+          <mxGeometry height="30" width="80" x="480" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-19" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-20" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-22" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="a7kfOLqFzs9Von1qZGA0-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5IpWu-6N1tLHI4XAG99y-2" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="D-8dfM7yrUYoK77np7sW-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="501" />
+              <mxPoint x="610" y="693" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A1VhUj8QFhEmw2Ag1Bnf-2" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-23" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;coconet.com:5432&lt;br&gt;&lt;br&gt;deployedImplementationType =&quot;PostgreSQL DatabaseServer&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="190" x="310" y="422" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-24" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" value="SoftwareServer" vertex="1">
+          <mxGeometry height="30" width="80" x="310" y="392" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-25" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A1VhUj8QFhEmw2Ag1Bnf-3" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-28" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;coconet.com:5432:&lt;br&gt;Connection&lt;br&gt;&lt;br&gt;userId=psAdmin&lt;br&gt;clearPassword=secret&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="160" x="630" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-29" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-30" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Connection" vertex="1">
+          <mxGeometry height="30" width="70" x="630" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-31" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="AssetConnection" vertex="1">
+          <mxGeometry height="30" width="110" x="510" y="439" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-32" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="JDBC REST&lt;br&gt;ConnectorType" vertex="1">
+          <mxGeometry height="60" width="120" x="850" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-33" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ConnectorType" vertex="1">
+          <mxGeometry height="30" width="80" x="850" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-34" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-35" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;coconet.com:5432:Endpoint&lt;br&gt;&lt;br&gt;address=&lt;br&gt;jdbc:postgresql://coconet.com:5432/postgres&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="290" x="990" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-36" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Endpoint" vertex="1">
+          <mxGeometry height="30" width="80" x="990" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-37" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectionConnectorType" vertex="1">
+          <mxGeometry height="30" width="170" x="680" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-38" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectToEndpoint" vertex="1">
+          <mxGeometry height="30" width="130" x="840" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-39" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="SourcedFrom" vertex="1">
+          <mxGeometry height="30" width="100" x="400" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-40" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="SourcedFrom" vertex="1">
+          <mxGeometry height="30" width="100" x="715" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-41" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="SourcedFrom" vertex="1">
+          <mxGeometry height="30" width="100" x="1030" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-42" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" value="Catalog PostgreSQL Server Asset" vertex="1">
+          <mxGeometry height="30" width="220" x="25" y="392" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-43" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="serverName=&quot;coconet.com:5432&quot;&lt;br&gt;databaseUserId=&quot;psAdmin&quot;&lt;br&gt;databasePassword=&quot;secret&quot;&lt;br&gt;connectionString=&lt;br&gt;jdbc:postgresql://coconet.com:5432/postgres&quot;" vertex="1">
+          <mxGeometry height="90" width="270" x="25" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-44" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" value="Survey PostgreSQL Server" vertex="1">
+          <mxGeometry height="30" width="180" x="25" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-45" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" value="Catalog PostgreSQL Server Databases" vertex="1">
+          <mxGeometry height="30" width="240" x="20" y="1085" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-47" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="AssetSurveyReport" vertex="1">
+          <mxGeometry height="30" width="130" x="455" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-9" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="a7kfOLqFzs9Von1qZGA0-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A1VhUj8QFhEmw2Ag1Bnf-5" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-55" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;coconet.com:5432:database1&lt;br&gt;&lt;br&gt;deployedImplementationType =PostgreSQL Database&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="190" x="710" y="1112" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-56" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" value="Relational&lt;br&gt;Database" vertex="1">
+          <mxGeometry height="30" width="80" x="710" y="1082" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-59" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A1VhUj8QFhEmw2Ag1Bnf-4" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="Ikl7Su4nN-SMVtI7CH5I-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-62" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;coconet.com:5432:&lt;br&gt;database1:Connection&lt;br&gt;&lt;br&gt;userId=psAdmin&lt;br&gt;clearPassword=secret&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="160" x="1030" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-63" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Connection" vertex="1">
+          <mxGeometry height="30" width="70" x="1030" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-64" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="AssetConnection" vertex="1">
+          <mxGeometry height="30" width="110" x="910" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-65" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="JDBC REST&lt;br&gt;ConnectorType" vertex="1">
+          <mxGeometry height="60" width="120" x="1250" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-66" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ConnectorType" vertex="1">
+          <mxGeometry height="30" width="80" x="1250" y="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-67" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;coconet.com:5432:database1:Endpoint&lt;br&gt;&lt;br&gt;address=&lt;br&gt;jdbc:postgresql://coconet.com:5432/database1&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="290" x="1390" y="1115" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-68" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Endpoint" vertex="1">
+          <mxGeometry height="30" width="80" x="1390" y="1085" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-69" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectionConnectorType" vertex="1">
+          <mxGeometry height="30" width="170" x="1080" y="1250" as="geometry" />
+        </mxCell>
+        <mxCell id="Ikl7Su4nN-SMVtI7CH5I-70" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectToEndpoint" vertex="1">
+          <mxGeometry height="30" width="130" x="1240" y="1135" as="geometry" />
+        </mxCell>
+        <mxCell id="D-8dfM7yrUYoK77np7sW-0" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="AnnotationType: Capture Database Sizes&lt;br&gt;&lt;br&gt;profileCounts = { databaseName, databaseSize }" vertex="1">
+          <mxGeometry height="80" width="295" x="815" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="D-8dfM7yrUYoK77np7sW-1" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;" value="ResourceProfileAnnotation" vertex="1">
+          <mxGeometry height="30" width="155" x="815" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-2" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="a7kfOLqFzs9Von1qZGA0-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ikl7Su4nN-SMVtI7CH5I-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-0" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;coconet.com:5432:DBMS&lt;br&gt;&lt;br&gt;deployedImplementationType =PostgreSQL Database Server&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="190" x="480" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-1" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" value="DatabaseManager" vertex="1">
+          <mxGeometry height="30" width="110" x="480" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-3" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="SupportedSoftwareCapability" vertex="1">
+          <mxGeometry height="30" width="180" x="415" y="838" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-4" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="operationalStatus=ENABLED(1)" vertex="1">
+          <mxGeometry height="30" width="190" x="440" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-5" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="CapabilityAssetUse" vertex="1">
+          <mxGeometry height="30" width="130" x="565" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-6" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="useType=OWNS(0)" vertex="1">
+          <mxGeometry height="30" width="130" x="580" y="1085" as="geometry" />
+        </mxCell>
+        <mxCell id="A1VhUj8QFhEmw2Ag1Bnf-6" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="a7kfOLqFzs9Von1qZGA0-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="a7kfOLqFzs9Von1qZGA0-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-7" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;coconet.com:5432:database1:schema1&lt;br&gt;&lt;br&gt;deployedImplementationType =PostgreSQL Database Schema&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="230" x="827" y="1390" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-8" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" value="DeployedDatabaseSchema" vertex="1">
+          <mxGeometry height="30" width="140" x="827" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-10" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="DataSetContent" vertex="1">
+          <mxGeometry height="30" width="110" x="760" y="1307.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-11" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="a7kfOLqFzs9Von1qZGA0-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="a7kfOLqFzs9Von1qZGA0-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-12" edge="1" parent="Ikl7Su4nN-SMVtI7CH5I-1" source="a7kfOLqFzs9Von1qZGA0-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="a7kfOLqFzs9Von1qZGA0-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-14" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;coconet.com:5432:&lt;br&gt;database1:schema1&lt;br&gt;Connection&lt;br&gt;&lt;br&gt;userId=psAdmin&lt;br&gt;clearPassword=secret&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="160" x="1187" y="1377.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-15" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Connection" vertex="1">
+          <mxGeometry height="30" width="70" x="1187" y="1347.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-16" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="AssetConnection" vertex="1">
+          <mxGeometry height="30" width="110" x="1067" y="1405.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-17" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="JDBC REST&lt;br&gt;ConnectorType" vertex="1">
+          <mxGeometry height="60" width="120" x="1407" y="1497.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-18" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ConnectorType" vertex="1">
+          <mxGeometry height="30" width="80" x="1407" y="1467.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-19" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="qualifiedName=&lt;div&gt;PostgreSQL Server:&lt;br&gt;coconet.com:5432:database1:schema1:Endpoint&lt;br&gt;&lt;br&gt;address=&lt;br&gt;jdbc:postgresql://coconet.com:5432/database1?currentSchema=schema1&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="443" x="1547" y="1392.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-20" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Endpoint" vertex="1">
+          <mxGeometry height="30" width="80" x="1547" y="1362.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-21" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectionConnectorType" vertex="1">
+          <mxGeometry height="30" width="170" x="1237" y="1527.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-22" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="ConnectToEndpoint" vertex="1">
+          <mxGeometry height="30" width="130" x="1397" y="1412.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a7kfOLqFzs9Von1qZGA0-23" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="serverName=&quot;coconet.com:5432&quot;&lt;br&gt;databaseUserId=&quot;psAdmin&quot;&lt;br&gt;databasePassword=&quot;secret&quot;&lt;br&gt;connectionString=&lt;br&gt;jdbc:postgresql://coconet.com:5432/{{databaseName}}&quot;" vertex="1">
+          <mxGeometry height="90" width="320" x="70" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="5IpWu-6N1tLHI4XAG99y-3" parent="Ikl7Su4nN-SMVtI7CH5I-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="AssociatedAnnotation" vertex="1">
+          <mxGeometry height="30" width="140" x="630" y="630" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

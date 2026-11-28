@@ -4,7 +4,9 @@
 
 ### Building a customized docker image
 
-The top-level directory of the Egeria omag-server-platform assembly contains the following files:
+A docker image of the [OMAG Server Platform](/concepts/omag-server-platform) is built from the Egeria omag-server-platform assembly.  When the [egeria build](/education/tutorials/building-egeria-tutorial/overview#building-the-egeria-source) completes, an unpacked copy of this assembly is located in the egeria directory under `open-metadata-distribution/omag-server-platform/build/unpacked/egeria-platform-{release}-distribution.tar.gz`.  Despite the `.tar.gz` ending, this is a directory.  Alternatively, unpack the assembly's distribution file as described in [Installing Egeria](/education/tutorials/building-egeria-tutorial/overview#installing-egeria).
+
+Change to the top-level directory of the assembly.  It contains the following files:
 
 ```bash
 $ ls
@@ -12,6 +14,9 @@ Dockerfile      LICENSE         NOTICE          README.md       assembly      di
 ```
 
 The `Dockerfile` contains the properties for building a docker image of all the files under `assembly/platform`.
+
+!!! tip "Matching the published docker image"
+    The `assembly/platform/application.properties` file in the assembly is set up for running the platform directly on your machine.  Egeria's own build replaces it with the [`container.application.properties` :material-github:](https://github.com/odpi/egeria/blob/main/container.application.properties){ target=gh } file from the top-level directory of egeria.git before it builds the images it publishes.  This file changes the platform's name and sets the `kafkaEndpoint` and `egeriaEndpoint` [placeholder variables](/concepts/placeholder#placeholder-variables) to addresses on `host.docker.internal` so that they can be reached from inside a container.  Copy it over `assembly/platform/application.properties` if you want your image to start with the same settings as the published `odpi/egeria-platform` image.
 
 Once you have the contents of `assembly/platform` as you want them, run the docker command:
 
@@ -46,7 +51,11 @@ What's Next?
   View summary of image vulnerabilities and recommendations -> docker scout quickview
 ```
 
-The resulting docker image is published to the docker service configured on your local machine.
+The resulting docker image is published to the docker service configured on your local machine.  Start a container from it with the docker command:
+
+```bash
+docker run -p 7443:7443 egeria-platform:{myversion}
+```
 
 
 

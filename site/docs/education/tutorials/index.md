@@ -50,6 +50,9 @@ The installed assembly gives you the option to run the platform directly from th
 ??? education "Building a customized docker image"
     --8<-- "snippets/tasks/task-building-customized-docker-image.md"
 
+??? education "Adding connectors to a docker image"
+    --8<-- "snippets/tasks/task-adding-connectors-to-docker-image.md"
+
 ## Tutorials for developing with Egeria
 
 The Egeria community typically uses IntelliJ for its development.  

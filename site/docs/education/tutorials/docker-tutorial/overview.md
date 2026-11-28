@@ -15,6 +15,8 @@ This page takes you through the different options for building and running egeri
 
 --8<-- "snippets/tasks/task-building-customized-docker-image.md"
 
+--8<-- "snippets/tasks/task-adding-connectors-to-docker-image.md"
+
 
 ## Using the standard docker container on docker hub
 

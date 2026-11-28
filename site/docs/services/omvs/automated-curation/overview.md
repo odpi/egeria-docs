@@ -88,49 +88,56 @@ Below is the list of technology types returned by `findTechnologyTypes` for `Pos
       "qualifiedName": "Egeria:ValidMetadataValue:TabularDataSet:deployedImplementationType-(PostgreSQL Tabular Data Set)",
       "displayName": "PostgreSQL Tabular Data Set",
       "description": "A database table hosted on a PostgreSQL relational database server that has the tabular data set interface.",
-      "category": "Valid Metadata Values"
+      "category": "Valid Metadata Values",
+      "url": "https://www.postgresql.org/"
     },
     {
       "technologyTypeGUID": "c113b127-ae8d-417f-90f2-92108c141270",
       "qualifiedName": "Egeria:ValidMetadataValue:TabularDataSetCollection:deployedImplementationType-(PostgreSQL Tabular Data Set Collection)",
       "displayName": "PostgreSQL Tabular Data Set Collection",
       "description": "A database schema hosted on a PostgreSQL relational database server that has the tabular data set collection interface.",
-      "category": "Valid Metadata Values"
+      "category": "Valid Metadata Values",
+      "url": "https://www.postgresql.org/"
     },
     {
       "technologyTypeGUID": "cdfedb9c-8020-422d-b89e-40c57df22bd0",
       "qualifiedName": "Egeria:ValidMetadataValue:DatabaseManager:deployedImplementationType-(PostgreSQL database manager (RDBMS))",
       "displayName": "PostgreSQL database manager (RDBMS)",
       "description": "The PostgreSQL capability that manages collections of data called relational databases which in turn are organized into a tabular format and accessed via the Structured Query Language (SQL).",
-      "category": "Valid Metadata Values"
+      "category": "Valid Metadata Values",
+      "url": "https://egeria-project.org/types/0/0050-Applications-and-Processes/"
     },
     {
       "technologyTypeGUID": "e46811ac-8b86-42c3-aaea-2fe55f474044",
       "qualifiedName": "Egeria:ValidMetadataValue:DeployedDatabaseSchema:deployedImplementationType-(PostgreSQL Relational Database Schema)",
       "displayName": "PostgreSQL Relational Database Schema",
       "description": "A database schema hosted on a PostgreSQL relational database server capable of being called through a JDBC Driver.",
-      "category": "Valid Metadata Values"
+      "category": "Valid Metadata Values",
+      "url": "https://www.postgresql.org/"
     },
     {
       "technologyTypeGUID": "f5edc367-6a11-4115-bf59-85278928f405",
       "qualifiedName": "Egeria:ValidMetadataValue:DataSet:deployedImplementationType-(PostgreSQL Table)",
       "displayName": "PostgreSQL Table",
       "description": "A table in a PostgreSQL database.  OpenLineage names it postgres://{host}:{port} + {database}.{schema}.{table}.",
-      "category": "Valid Metadata Values"
+      "category": "Valid Metadata Values",
+      "url": "https://www.postgresql.org/"
     },
     {
       "technologyTypeGUID": "ff56fc56-c4a1-469e-8040-472e8fe54694",
       "qualifiedName": "Egeria:ValidMetadataValue:RelationalDatabase:deployedImplementationType-(PostgreSQL Relational Database)",
       "displayName": "PostgreSQL Relational Database",
       "description": "A database hosted on a PostgreSQL server.",
-      "category": "Valid Metadata Values"
+      "category": "Valid Metadata Values",
+      "url": "https://www.postgresql.org/"
     },
     {
       "technologyTypeGUID": "ff7c8d09-9813-453e-9895-7a2b0a6b0be3",
       "qualifiedName": "Egeria:ValidMetadataValue:SoftwareServer:deployedImplementationType-(PostgreSQL Server)",
       "displayName": "PostgreSQL Server",
       "description": "A database server running the PostgreSQL software. PostgreSQL is an advanced open source relational database.PostgreSQL is an advanced open source relational database.",
-      "category": "Valid Metadata Values"
+      "category": "Valid Metadata Values",
+      "url": "https://www.postgresql.org/"
     }
   ]
 }
@@ -142,7 +149,7 @@ The next example shows the technology details returned by `getTechnologyTypeDeta
 * *resourceList* lists the connectors, governance action types and other resources that support this technology.
 * *mermaidGraph* is a [mermaid](/user-interfaces/mermaid/overview) graph of the technology type and everything linked to it.
 
-The link to the documentation for a technology is stored in the *url* attribute of its technology type element (for example, `https://kafka.apache.org/` for Apache Kafka Server), rather than in a linked external reference.  The technology types supplied with Egeria therefore have no *externalReferences* section in their detailed results.  This section only appears for a technology type that your organization has linked to its own external references.
+The *url* is the link to the documentation for the technology.  It is stored in the *url* attribute of the technology type element, rather than in a linked external reference, and so the technology types supplied with Egeria have no *externalReferences* section in their detailed results.  This section only appears for a technology type that your organization has linked to its own external references.
 
 ```json
 {
@@ -154,6 +161,7 @@ The link to the documentation for a technology is stored in the *url* attribute 
     "displayName": "Apache Kafka Server",
     "description": "A software server supporting an event broker that enables high-speed, reliable topic-based event exchange.",
     "category": "Valid Metadata Values",
+    "url": "https://kafka.apache.org/",
     "catalogTemplates": [],
     "governanceActionProcesses": [],
     "resourceList": [],

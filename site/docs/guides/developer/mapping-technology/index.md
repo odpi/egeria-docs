@@ -4,7 +4,7 @@
 
 # Modelling different types of technology
 
-Every organization runs a different mix of technology, and new technologies appear all the time.  Open metadata needs to describe each of them precisely enough that people can find what they are looking for and automation can be targeted at the right resources - but without needing a change to the open metadata types each time a new product is released.
+The huge range and volatility of the technology that is available to organizations today is a challenge for standards such as open metadata.  It needs to maintain a balance between the need to describe all the technology that is available and the need to keep the type system small and manageable.
 
 This section of the developer guide describes how different types of technology are represented in open metadata.  It begins with the mechanisms used to say *what type of thing* a metadata element describes.  There are three of them, and they work at different levels of precision:
 
@@ -146,7 +146,9 @@ The difference between the two attributes is one of scope.  Use *deployedImpleme
 
 ## Modelling Schema
 
-The [Schema open metadata types](/concepts/schema) describe the structure of data.
+The [SchemaElement open metadata types](/types/5) describe the structure of data.  This allows us to specify precisely the type of data items it contains and how they are arranged.  Such schemas can them be attached to Data Stores, Data Sets, APIs and Ports to show where the data is stored, how it can be queried and what data flows between processes.  The schemas are linked to assets and ports using the [Schema](/types/5/0503-Asset-Schema/) relationship.
+
+Different technology types structure data in ways that favour their use.  Some work with tabular data, others with graphs, and others with hierarchical data.  The specific 
 
 ## Representing File Assets
 
